@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include <malloc.h>
 #include <float.h>
+#include <fftw3.h>
 #include <gsl/gsl_integration.h>
 #include <complex.h>
-#include <fftw3.h>
+
 
 
 #define EPS 3.0e-14 
@@ -52,8 +53,6 @@ int main()
     
     fftw_complex signal[NUM_POINTS];
     fftw_complex result[NUM_POINTS];
-    
-    signal[0][0] = 1.0 * cos(10.0 ) + 0.5 * cos(25.0 );
     
     double tempT = 0;
 	double tempEnd = 20;
