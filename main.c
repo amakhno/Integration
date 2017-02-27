@@ -2,11 +2,9 @@
 #include <stdio.h>
 #include <malloc.h>
 #include <float.h>
+#include <complex.h>
 #include <fftw3.h>
 #include <gsl/gsl_integration.h>
-#include <complex.h>
-
-
 
 #define EPS 3.0e-14 
 #define H 1.054572e-27
@@ -51,34 +49,46 @@ int main()
     in = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * NPOINTS);
     out = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * NPOINTS);
     
-    fftw_complex signal[NUM_POINTS];
-    fftw_complex result[NUM_POINTS];
-    
-    double tempT = 0;
 	double tempEnd = 20;
 	double step = tempEnd / NPOINTS;
-	
-	double complex underintegrateFunc;
-	
+	fftw_complex underintegrateFunc;
+	double tempPower;
 	int i = 0;
-	for(double tempT = 0; tempT < tempEnd; tempT+=step)
+
+	///////////////////////////////////////____FFTW_____////
+	/*for(double tempT = 0; tempT < tempEnd; tempT+=step)
 	{
-		underintegrateFunc = (cexp(I * 1 * tempT)/H) 
+		underintegrateFunc = (cexp(I * 1 * tempT/H)) 
 			/ cpow(tempT, 3.0/2.0) 
 			* (cexp(I * S_integrate(t-tempT, t) / H) - 1);
-		in[i][0] = underintegrateFunc;
+		in[i] = underintegrateFunc;
+		//fprintf(f, "%d: %f + %fi\n", i, creal(in[i]), cimag(in[i]));
 		i++;
 	}
 	
+	p = fftw_plan_dft_1d(NPOINTS, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
 	
+	fftw_execute(p); 
+    
+    
+    
+    
+    for(int i = 0; i<NPOINTS; ++i)
+	{
+		tempPower = creal(out[i])*creal(out[i]) + cimag(out[i])*cimag(out[i]);													
+		fprintf(f, "%d %f\n", i, tempPower );
+	}
+    
+    fftw_free(in); fftw_free(out);
+	fftw_destroy_plan(p);*/
 	
 	//Old Cycle
-	/*for(tau = 0; tau<20; tau+=0.1)
+	for(tau = 0; tau<20; tau+=0.1)
 	{
 															
 		fprintf(f, "%f %f\n", tau, S_integrate(t-tau, t));
 	}
-	fclose(f);*/
+	fclose(f);
 	return 0;
 }
 
