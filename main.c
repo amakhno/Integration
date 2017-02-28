@@ -15,7 +15,7 @@
 #define ALPHA 4.472135955
 #define SIZE 20
 #define NUM_POINTS 64
-#define NPOINTS 600
+#define NPOINTS 10000	//40000
 
 int gauleg(double x1, double x2, double *x, double *w, int n);
 double F(double t);
@@ -49,29 +49,24 @@ int main()
     in = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * NPOINTS);
     out = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * NPOINTS);
     
-	double tempEnd = 20;
+	double tempEnd = 50;
 	double step = tempEnd / NPOINTS;
-	fftw_complex underintegrateFunc;
 	double tempPower;
 	int i = 0;
 
 	///////////////////////////////////////____FFTW_____////
-	/*for(double tempT = 0; tempT < tempEnd; tempT+=step)
+	for(double tempT = step; tempT < tempEnd; tempT+=step)
 	{
-		underintegrateFunc = (cexp(I * 1 * tempT/H)) 
+		in[i] = (cexp(I * 1 * tempT/H)) 
 			/ cpow(tempT, 3.0/2.0) 
 			* (cexp(I * S_integrate(t-tempT, t) / H) - 1);
-		in[i] = underintegrateFunc;
 		//fprintf(f, "%d: %f + %fi\n", i, creal(in[i]), cimag(in[i]));
 		i++;
 	}
 	
 	p = fftw_plan_dft_1d(NPOINTS, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
 	
-	fftw_execute(p); 
-    
-    
-    
+	fftw_execute(p);    
     
     for(int i = 0; i<NPOINTS; ++i)
 	{
@@ -79,16 +74,16 @@ int main()
 		fprintf(f, "%d %f\n", i, tempPower );
 	}
     
-    fftw_free(in); fftw_free(out);
-	fftw_destroy_plan(p);*/
+    //fftw_free(in); fftw_free(out);
+	//fftw_destroy_plan(p);
 	
 	//Old Cycle
-	for(tau = 0; tau<20; tau+=0.1)
+	/*for(tau = 0; tau<20; tau+=0.1)
 	{
 															
 		fprintf(f, "%f %f\n", tau, S_integrate(t-tau, t));
 	}
-	fclose(f);
+	fclose(f);*/
 	return 0;
 }
 
