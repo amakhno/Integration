@@ -5,17 +5,20 @@
 #include <complex.h>
 #include <fftw3.h>
 #include <gsl/gsl_integration.h>
+#include <gsl/gsl_math.h>
+#include <gsl/gsl_roots.h>
 
 #define EPS 3.0e-14 
 #define H 1.054572e-27
 #define PIM4 0.7511255444649425 
 #define MAXIT 10 
 #define _GNU_SOURCE
-#define OMEGA 1
+#define OMEGA 1.0
+#define F0 1.0
 #define ALPHA 4.472135955
 #define SIZE 20
 #define NUM_POINTS 64
-#define NPOINTS 10000	//40000
+#define NPOINTS 1000	//40000
 
 int gauleg(double x1, double x2, double *x, double *w, int n);
 double F(double t);
@@ -26,9 +29,22 @@ double A_evaluate(double t, void * params);
 double A_integrate(double t1, double t);
 double S_integrate(double t1, double t);
 double S_integrate_func(double eps, void * params);
-double S_integrate_func2(double eps, void * params);
-double M(double eps, double t);
-double FFT_M();
+double Alpha2(double t1, double t);
+
+struct quadratic_params
+  {
+    double t;
+  };
+
+double quadratic (double t0, void *params)
+{
+  struct quadratic_params *p 
+    = (struct quadratic_params *) params;
+
+  double t = p->t;
+
+  return Alpha2(t0, t) - 2;
+}
 
 int main()
 {
@@ -36,6 +52,8 @@ int main()
 	printf ("A_integration = % .18f\n", a_integrate);
 	FILE *f;
 	f = fopen("S.txt", "w");
+	FILE *s;
+	s = fopen("Spec.txt", "w");
 	double t = 10;
 	double tau = 0;
 	double a_integrate_result;
@@ -52,15 +70,35 @@ int main()
 	double tempEnd = 50;
 	double step = tempEnd / NPOINTS;
 	double tempPower;
+	double roots[50];
 	int i = 0;
 
-	///////////////////////////////////////____FFTW_____////
-	for(double tempT = step; tempT < tempEnd; tempT+=step)
+	gsl_function AlphaFunc;
+	struct quadratic_params params = { t };
+
+	double h = 0.1;
+	double t1_hi = t-h, t1_lo = t - 2*h;
+	while( (Alpha2(t1_lo, t) - 2) * (Alpha2(t1_hi, t) - 2) > 0 && (t1_lo>-50) )
 	{
-		in[i] = (cexp(I * 1 * tempT/H)) 
+		fprintf(f, "%f %f\n", t1_lo, Alpha2(t1_lo, t) );
+		t1_lo -= h;
+	}
+	
+	
+	/*///////////////////////////////////////____FFTW_____////
+	for(double tempT = 0; tempT < tempEnd; tempT+=step)
+	{
+		in[i] = cexp(I * 1 * tempT) 
 			/ cpow(tempT, 3.0/2.0) 
-			* (cexp(I * S_integrate(t-tempT, t) / H) - 1);
-		//fprintf(f, "%d: %f + %fi\n", i, creal(in[i]), cimag(in[i]));
+			* (cexp(I * S_integrate(t-tempT, t)) - 1);
+			
+		if(!tempT)
+		{
+			in[i] = 0;
+		}
+			
+		fprintf(f, "%d: %f + %fi\n", i, creal(in[i]), cimag(in[i]));
+		printf("%d: %f + %fi\n", i, creal(in[i]), cimag(in[i]));
 		i++;
 	}
 	
@@ -71,8 +109,8 @@ int main()
     for(int i = 0; i<NPOINTS; ++i)
 	{
 		tempPower = creal(out[i])*creal(out[i]) + cimag(out[i])*cimag(out[i]);													
-		fprintf(f, "%d %f\n", i, tempPower );
-	}
+		fprintf(s, "%d %f\n", i, tempPower );
+	}*/
     
     //fftw_free(in); fftw_free(out);
 	//fftw_destroy_plan(p);
@@ -89,7 +127,7 @@ int main()
 
 double f (double x, void * params) 
 {
-  return exp(-(x*x)/(ALPHA*ALPHA))*cos(OMEGA*x);
+  return F0*exp(-(x*x)/(ALPHA*ALPHA))*cos(OMEGA*x);
 }
 
 double A_evaluate(double t, void * params)
@@ -106,6 +144,8 @@ double A_evaluate(double t, void * params)
 	gsl_integration_workspace_free (w);
 	return result;
 }
+
+
 
 double A_integrate(double t1, double t)
 {
@@ -135,30 +175,13 @@ double S_integrate(double t1, double t)
 	return -result/2.0 + a_integrate_result;
 }
 
+double Alpha2(double t1, double t)
+{
+	return A_evaluate(t1, 0) - A_integrate(t1, t) / (t1 - t);
+}
+
 double S_integrate_func(double eps, void * params)
 {
 	double temp = A_evaluate(eps, 0);
 	return temp*temp;
 }
-
-double M_func(double t0, double eps, double t1)
-{
-	return exp(I * eps * (t1)/H) / pow(t1, 5/2) * ( exp(I*S_integrate(t0, t0-t1)/H) - 1 );
-}
-
-double FFT_M()
-{
-	fftw_complex *in, *out;
-    fftw_plan p;
-	int N = 200;
-	in = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * N);
-    out = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * N);
-    p = fftw_plan_dft_1d(N, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
-    
-    fftw_execute(p); /* repeat as needed */
-    
-    fftw_destroy_plan(p);
-    fftw_free(in); fftw_free(out);
-   return 0;
-}
-
