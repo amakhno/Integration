@@ -7,6 +7,7 @@
 #include <gsl/gsl_integration.h>
 #include <gsl/gsl_math.h>
 #include <gsl/gsl_roots.h>
+#include <gsl/gsl_errno.h>
 
 #define EPS 3.0e-14 
 #define H 1.054572e-27
@@ -43,7 +44,7 @@ double quadratic (double t0, void *params)
 
   double t = p->t;
 
-  return Alpha2(t0, t) - 2;
+  return Alpha2(t0, t);
 }
 
 int main()
@@ -52,8 +53,6 @@ int main()
 	printf ("A_integration = % .18f\n", a_integrate);
 	FILE *f;
 	f = fopen("S.txt", "w");
-	FILE *s;
-	s = fopen("Spec.txt", "w");
 	double t = 10;
 	double tau = 0;
 	double a_integrate_result;
@@ -69,20 +68,55 @@ int main()
     
 	double tempEnd = 50;
 	double step = tempEnd / NPOINTS;
-	double tempPower;
-	double roots[50];
+	double tempPower;	
 	int i = 0;
-
+	double roots[50];
+	
+	
 	gsl_function AlphaFunc;
+	const gsl_root_fsolver_type *T;
+	gsl_root_fsolver *s;
 	struct quadratic_params params = { t };
+	AlphaFunc.function = &quadratic;
+	AlphaFunc.params = &params;
+	T = gsl_root_fsolver_brent;
+	s = gsl_root_fsolver_alloc (T);	
 
 	double h = 0.1;
-	double t1_hi = t-h, t1_lo = t - 2*h;
-	while( (Alpha2(t1_lo, t) - 2) * (Alpha2(t1_hi, t) - 2) > 0 && (t1_lo>-50) )
+	double t1_hi = t, t1_lo = t - h;
+	int countOfRoots = 0;
+	while( t1_lo > -50 )
 	{
+		if ((Alpha2(t1_lo, t)) * (Alpha2(t1_hi, t)) < 0)
+		{
+			gsl_root_fsolver_set (s, &AlphaFunc, t1_lo, t1_hi);
+			printf("В промежутке : [%f, %f]\n", t1_lo, t1_lo+h);			
+			int iter = 0;
+			int status = 0;
+			do
+			{
+				iter++;
+				status = gsl_root_fsolver_iterate (s);
+				roots[countOfRoots] = gsl_root_fsolver_root (s);
+				t1_lo = gsl_root_fsolver_x_lower (s);
+				t1_hi = gsl_root_fsolver_x_upper (s);
+				status = gsl_root_test_interval (t1_lo, t1_hi,
+                                       0, 0.001);
+			}
+			while (status == GSL_CONTINUE && iter < 1000);
+			printf("Решение: %f\n", roots[countOfRoots]);
+			countOfRoots++;
+			t1_hi = t1_lo;
+			t1_lo -= h;
+		}
 		fprintf(f, "%f %f\n", t1_lo, Alpha2(t1_lo, t) );
+		t1_hi = t1_lo;
 		t1_lo -= h;
 	}
+	
+	
+	
+	
 	
 	
 	/*///////////////////////////////////////____FFTW_____////
@@ -120,8 +154,8 @@ int main()
 	{
 															
 		fprintf(f, "%f %f\n", tau, S_integrate(t-tau, t));
-	}
-	fclose(f);*/
+	}*/
+	fclose(f);
 	return 0;
 }
 
