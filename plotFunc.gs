@@ -3,4 +3,4 @@ set output 'output.png'
 set style line 1 lt 2 lc rgb '#007dd2bd' # blue
 
 
-plot 'F1.txt' ls 1 with lines, 'S.txt'  
+plot 'analytical.txt' ls 1 with lines, 'numerical.txt'
