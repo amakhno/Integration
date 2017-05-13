@@ -27,6 +27,8 @@ double A_evaluate(double t, void * params);
 double A_integrate(double t1, double t);
 double S_integrate(double t1, double t);
 double S_integrate_func(double eps, void * params);
+double S_integrate_new(double tau, double t);
+double S_integrate_func_new(double eps, void * params);
 double Alpha2(double t1, double t);
 double GetEvalSolve(double t);
 
@@ -35,6 +37,12 @@ double GetEvalSolve(double t);
 struct quadratic_params
   {
     double t;
+  };
+
+struct S_integrate_params
+  {
+    double t;
+    double tau;
   };
 
 //Структура для численнного решения уравнения
@@ -101,16 +109,18 @@ double GetAnalyticSolve(double t, int countOfRoots, double* roots)
 	printf("\nВсего корней при t = %f:\t%d\n", t, countOfRoots);
 	fftw_complex sum = 0;
 	double E = -2;
+	
 	for(int i = 0; i<countOfRoots; i++)
 	{		
-		double d = E * ( f(roots[i], 0) );//-
+		double S_1 = S_integrate(roots[i], t) + E*(t-roots[i]);
+		double d = E * ( f(roots[i], 0) ); //-
 			//( 1/( (roots[i] - t)*(roots[i] - t) ) * 
 			//A_integrate(roots[i], t) - A_evaluate(roots[i], 0) / (t - roots[i])) );
-		sum += cexp(I * S_integrate(roots[i], t) + E*(t-roots[i]))/(csqrt(d) * cpow( t - roots[i] , 3.0/2.0));	
-		printf("d = %f\n", d);	
-		printf("S_integrate(roots[i], t) = %f\n", creal(S_integrate(roots[i], t)));	
-		printf("E*(t-roots[i]) = %f\n", E*(t-roots[i]));
-		printf("cexp(I * S_integrate(roots[i], t) + E*(t-roots[i])) = %f\n", creal(cexp(I * S_integrate(roots[i], t) + E*(t-roots[i]))));
+		sum += cexp(I * S_1)/(csqrt(d) * cpow( t - roots[i] , 3.0/2.0));	
+		//printf("d = %f\n", d);	
+		//printf("S_integrate(roots[i], t) = %f\n", creal(S_integrate(roots[i], t)));	
+		//printf("E*(t-roots[i]) = %f\n", E*(t-roots[i]));
+		//printf("cexp(I * S_integrate(roots[i], t) + E*(t-roots[i])) = %f\n", creal(cexp(I * S_integrate(roots[i], t) + E*(t-roots[i]))));
 	}	
 	printf("Value = %f\n", creal(sum)*creal(sum) + cimag(sum)*cimag(sum));
 	return creal(sum)*creal(sum) + cimag(sum)*cimag(sum);
@@ -118,6 +128,9 @@ double GetAnalyticSolve(double t, int countOfRoots, double* roots)
 
 int main()
 {
+	printf("A(5) = %f\n", A_evaluate(5, 0));
+	printf("A_integrate(5, 6) = %f\n", A_integrate(5, 6));
+	printf("S(5, 6) = %f\n", S_integrate_new(5, 6));
 	FILE *f;
 	f = fopen("analytical.txt", "w");
 	FILE *f1;
@@ -125,10 +138,10 @@ int main()
 	FILE *f2;
 	f2 = fopen("roots.txt", "w");
 	double a_integrate_result;
-	
+	printf("Aint(0 5) = %f", A_integrate(0.0, 5.0));
 	double roots[50];
 	
-	for(double t = 2.451870; t<2.451871; t+=0.00000001)
+	for(double t = 4; t<5; t+=0.1)
 	{		
 		int countOfRoots = FindRoots( t , roots );
 		for(int j = 0; j<countOfRoots; j++)
@@ -136,10 +149,10 @@ int main()
 			fprintf(f2, "%3.10f %3.10f\n", t, roots[j]);
 		}
 		
-		//double m1 = GetAnalyticSolve( t , countOfRoots, roots );
-		//double m2 = GetEvalSolve( t );
-		//fprintf(f, "%f %f\n", t , m1);
-		//fprintf(f1, "%f %f\n", t, m2);
+		double m1 = GetAnalyticSolve( t , countOfRoots, roots );
+		double m2 = GetEvalSolve( t );
+		fprintf(f, "%f %f\n", t , m1);
+		fprintf(f1, "%f %f\n", t, m2);
 	}
 	fclose(f);
 	fclose(f1);
@@ -163,8 +176,8 @@ double A_evaluate(double t, void * params)
 	gsl_function F;
 	F.function = &f;
 	F.params = &alpha;
-	gsl_integration_workspace * w = gsl_integration_workspace_alloc (10000);
-	gsl_integration_qags (&F, t1, t, 1e-13, 0, 10000, w, &result, &error); 
+	gsl_integration_workspace * w = gsl_integration_workspace_alloc (1000000);
+	gsl_integration_qags (&F, t1, t, 1e-13, 0, 1000000, w, &result, &error); 
 	gsl_integration_workspace_free (w);
 	return result;
 }
@@ -188,7 +201,7 @@ double A_integrate(double t1, double t)
 //Под интегралом функция S_integrate_func
 double S_integrate(double t1, double t)
 {
-	double a_integrate_result = A_integrate(t1, t)/( 2*(t1-t) );
+	double a_integrate_result = A_integrate(t1, t)/( 2*(t-t1) );
 	double result, error;
 	gsl_function F;
 	F.function = &S_integrate_func;
@@ -199,10 +212,36 @@ double S_integrate(double t1, double t)
 	return -result/2.0 + a_integrate_result;
 }
 
+//Под интегралом функция S_integrate_func
+double S_integrate_new(double tau, double t)
+{
+	struct S_integrate_params params = { t, tau };
+	double result, error;
+	gsl_function F;
+	F.function = &S_integrate_func_new;
+	F.params = &params;
+	gsl_integration_workspace * b = gsl_integration_workspace_alloc (10000);
+	gsl_integration_qags (&F, tau, t, 1e-13, 0, 10000, b, &result, &error); 
+	gsl_integration_workspace_free (b);
+	return -result/2.0;
+}
+
+double S_integrate_func_new(double eps, void * params)
+{	
+	struct S_integrate_params *p 
+    = (struct S_integrate_params *) params;
+
+	double t = p->t;
+	double tau = p->tau;
+	double temp = A_evaluate(eps, 0) - A_integrate(tau, t)/(t-tau);
+	/*(A(eps) - intA(tau, t)/(t-tau))*/
+	return temp*temp;
+}
+
 //Функця по которой решается уравнение
 double Alpha2(double t1, double t)
 {
-	return A_evaluate(t1, 0) - A_integrate(t1, t) / (t1 - t);
+	return A_evaluate(t1, 0) - A_integrate(t1, t) / (t - t1);
 }
 
 double S_integrate_func(double eps, void * params)
