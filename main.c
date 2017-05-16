@@ -41,8 +41,7 @@ struct quadratic_params
 
 struct S_integrate_params
   {
-    double t;
-    double tau;
+    double Aint;
   };
 
 //Структура для численнного решения уравнения
@@ -137,11 +136,25 @@ int main()
 	f1 = fopen("numerical.txt", "w");
 	FILE *f2;
 	f2 = fopen("roots.txt", "w");
+	
+	//----------------------PrintS
+	/*FILE *f3;
+	f3 = fopen("S.txt", "w");	
+	for(double t1 = -150; t1<-140; t1+=0.01)
+	{
+		printf("t1 = %f\n", t1);
+		fprintf(f3, "%f %f\n", t1 , S_integrate_new(t1, 6.0));
+	}
+	fclose(f3);*/
+	//----------------------PrintS
+	
+	
+	
 	double a_integrate_result;
 	printf("Aint(0 5) = %f", A_integrate(0.0, 5.0));
 	double roots[50];
 	
-	for(double t = 4; t<5; t+=0.1)
+	for(double t = 10; t<11; t+=0.1)
 	{		
 		int countOfRoots = FindRoots( t , roots );
 		for(int j = 0; j<countOfRoots; j++)
@@ -156,7 +169,7 @@ int main()
 	}
 	fclose(f);
 	fclose(f1);
-	fclose(f2);
+	fclose(f2);	
 	return 0;
 }
 
@@ -215,7 +228,8 @@ double S_integrate(double t1, double t)
 //Под интегралом функция S_integrate_func
 double S_integrate_new(double tau, double t)
 {
-	struct S_integrate_params params = { t, tau };
+	double Aint = A_integrate(tau, t)/(t-tau);
+	struct S_integrate_params params = { Aint };
 	double result, error;
 	gsl_function F;
 	F.function = &S_integrate_func_new;
@@ -231,9 +245,8 @@ double S_integrate_func_new(double eps, void * params)
 	struct S_integrate_params *p 
     = (struct S_integrate_params *) params;
 
-	double t = p->t;
-	double tau = p->tau;
-	double temp = A_evaluate(eps, 0) - A_integrate(tau, t)/(t-tau);
+	double Aint = p->Aint;
+	double temp = A_evaluate(eps, 0) - Aint;
 	/*(A(eps) - intA(tau, t)/(t-tau))*/
 	return temp*temp;
 }
@@ -265,15 +278,18 @@ double GetEvalSolve(double t)
 	
 	for(double tempT = 0; tempT < tempEnd; tempT+=step)
 	{
-		in[i] = cexp(I * 1 * tempT) 
-			/ cpow(tempT, 3.0/2.0) 
-			* (cexp(I * S_integrate(t-tempT, t)) - 1);
-			
 		if(!tempT)
 		{
 			in[i] = 0;
+			i++;
+			continue;
 		}
-		i++;
+		
+		in[i] = cexp(I * 1 * tempT) 
+			/ cpow(tempT, 3.0/2.0) 
+			* (cexp(I * S_integrate_new(t-tempT, t)) - 1);
+		i++;	
+		
 	}
 	
 	p = fftw_plan_dft_1d(NPOINTS, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
