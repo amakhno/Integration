@@ -68,7 +68,7 @@ int FindRoots(double t, double* roots)
 	double h = 0.2;
 	double t1_hi = t, t1_lo = t - h;
 	int countOfRoots = 0;
-	while( t1_lo > -20 )
+	while( t1_lo > -30 )
 	{
 		if ((Alpha2(t1_lo, t)) * (Alpha2(t1_hi, t)) < 0)
 		{
@@ -112,7 +112,7 @@ double GetAnalyticSolve(double t, int countOfRoots, double* roots)
 	for(int i = 0; i<countOfRoots; i++)
 	{		
 		double S_1 = S_integrate(roots[i], t) + E*(t-roots[i]);
-		double d = E * ( f(roots[i], 0) ); //-
+		double d = - E * ( f(roots[i], 0) ); //-
 			//( 1/( (roots[i] - t)*(roots[i] - t) ) * 
 			//A_integrate(roots[i], t) - A_evaluate(roots[i], 0) / (t - roots[i])) );
 		sum += cexp(I * S_1)/(csqrt(d) * cpow( t - roots[i] , 3.0/2.0));	
@@ -138,23 +138,19 @@ int main()
 	f2 = fopen("roots.txt", "w");
 	
 	//----------------------PrintS
-	/*FILE *f3;
+	FILE *f3;
 	f3 = fopen("S.txt", "w");	
-	for(double t1 = -150; t1<-140; t1+=0.01)
+	for(double t1 = -6; t1<5.9; t1+=0.01)
 	{
 		printf("t1 = %f\n", t1);
 		fprintf(f3, "%f %f\n", t1 , S_integrate_new(t1, 6.0));
 	}
-	fclose(f3);*/
+	fclose(f3);
 	//----------------------PrintS
 	
-	
-	
-	double a_integrate_result;
-	printf("Aint(0 5) = %f", A_integrate(0.0, 5.0));
 	double roots[50];
 	
-	for(double t = 10; t<11; t+=0.1)
+	for(double t = 0; t<10; t+=0.1)
 	{		
 		int countOfRoots = FindRoots( t , roots );
 		for(int j = 0; j<countOfRoots; j++)
