@@ -32,6 +32,8 @@ double S_integrate_func_new(double eps, void * params);
 double Alpha2(double t1, double t);
 double GetEvalSolve(double t);
 
+double countOfRootsPrev = 0;
+
 
 //Структура для численнного решения уравнения
 struct quadratic_params
@@ -108,9 +110,29 @@ double GetAnalyticSolve(double t, int countOfRoots, double* roots)
 	printf("\nВсего корней при t = %f:\t%d\n", t, countOfRoots);
 	fftw_complex sum = 0;
 	double E = -2;
+	double findWithClose;
+	int a = 0;
+	
+	if((countOfRootsPrev<countOfRoots) && a)
+	{
+		findWithClose = roots[0];
+		a = 1;
+	}
 	
 	for(int i = 0; i<countOfRoots; i++)
-	{		
+	{	
+		if(abs(roots[i]-findWithClose)<0.5)
+		{
+			printf("Берется корень: %f\n", roots[i]);
+			double S_1 = S_integrate(roots[i], t) + E*(t-roots[i]);
+			double d = - E * ( f(roots[i], 0) ); 
+			sum += cexp(I * S_1)/(csqrt(d) * cpow( t - roots[i] , 3.0/2.0));	
+			findWithClose = roots[i];
+		}	
+		
+		
+		
+		/*
 		double S_1 = S_integrate(roots[i], t) + E*(t-roots[i]);
 		double d = - E * ( f(roots[i], 0) ); //-
 			//( 1/( (roots[i] - t)*(roots[i] - t) ) * 
@@ -119,7 +141,7 @@ double GetAnalyticSolve(double t, int countOfRoots, double* roots)
 		//printf("d = %f\n", d);	
 		//printf("S_integrate(roots[i], t) = %f\n", creal(S_integrate(roots[i], t)));	
 		//printf("E*(t-roots[i]) = %f\n", E*(t-roots[i]));
-		//printf("cexp(I * S_integrate(roots[i], t) + E*(t-roots[i])) = %f\n", creal(cexp(I * S_integrate(roots[i], t) + E*(t-roots[i]))));
+		//printf("cexp(I * S_integrate(roots[i], t) + E*(t-roots[i])) = %f\n", creal(cexp(I * S_integrate(roots[i], t) + E*(t-roots[i]))));*/
 	}	
 	printf("Value = %f\n", creal(sum)*creal(sum) + cimag(sum)*cimag(sum));
 	return creal(sum)*creal(sum) + cimag(sum)*cimag(sum);
@@ -138,19 +160,20 @@ int main()
 	f2 = fopen("roots.txt", "w");
 	
 	//----------------------PrintS
-	FILE *f3;
+	/*FILE *f3;
 	f3 = fopen("S.txt", "w");	
-	for(double t1 = -6; t1<5.9; t1+=0.01)
+	for(double t1 = -6; t1<5.9; t1+=0.1)
 	{
 		printf("t1 = %f\n", t1);
 		fprintf(f3, "%f %f\n", t1 , S_integrate_new(t1, 6.0));
 	}
-	fclose(f3);
+	fclose(f3);*/
 	//----------------------PrintS
 	
 	double roots[50];
+	int countOfRootsPrev = FindRoots( 3 , roots );
 	
-	for(double t = 0; t<10; t+=0.1)
+	for(double t = 7; t<12; t+=1)
 	{		
 		int countOfRoots = FindRoots( t , roots );
 		for(int j = 0; j<countOfRoots; j++)
