@@ -8,10 +8,11 @@
 #include <gsl/gsl_math.h>
 #include <gsl/gsl_roots.h>
 #include <gsl/gsl_errno.h>
-
-#define EPS 3.0e-14 
+ 
+#define EPS 0.5
 #define H 1.054572e-27
 #define PIM4 0.7511255444649425 
+#define PI 3.14159265359
 #define MAXIT 10 
 #define _GNU_SOURCE
 #define OMEGA 1.0
@@ -21,6 +22,7 @@
 #define NUM_POINTS 64
 #define NPOINTS 100	//
 #define END_ROOT_FIND 30
+
 
 double f(double x, void * params);
 double A_evaluate(double t, void * params);
@@ -54,7 +56,7 @@ double quadratic (double t0, void *params)
 
   double t = p->t;
 
-  return Alpha2(t0, t);
+  return Alpha2(t0, t)-sqrt(EPS);
 }
 
 int FindRoots(double t, double* roots)
@@ -68,11 +70,19 @@ int FindRoots(double t, double* roots)
 	T = gsl_root_fsolver_brent;
 	s = gsl_root_fsolver_alloc (T);	
 	double h = 0.2;
+	/*FILE *alpha;
+	alpha = fopen("alpha.txt", "w");
+	printf("t = %f'n", t);
+	for(double i = -30; i<t; i+=0.5)
+	{
+		fprintf(alpha, "%f %f\n", i, quadratic(i, &params));
+	}
+	fclose(alpha);*/
 	double t1_hi = t, t1_lo = t - h;
 	int countOfRoots = 0;
 	while( t1_lo > -30 )
 	{
-		if ((Alpha2(t1_lo, t)) * (Alpha2(t1_hi, t)) < 0)
+		if ((quadratic(t1_lo, &params)) * (quadratic(t1_hi, &params)) < 0)
 		{
 			gsl_root_fsolver_set (s, &AlphaFunc, t1_lo, t1_hi);			
 			int iter = 0;
@@ -104,37 +114,44 @@ int FindRoots(double t, double* roots)
 	return countOfRoots;
 }
 
+fftw_complex I_0(double t)
+{
+	fftw_complex f1 = 3/8 * sqrt(2) * sqrt(PI) / ( csqrt(I*PI) * cpow(abs(EPS), 5/2) );
+	fftw_complex A2 = (-I * f(t, 0)*f(t, 0)/24);
+	return f1*A2;
+}
+
 double GetAnalyticSolve(double t, int countOfRoots, double* roots)
 {
 	printf("\nПоиска аналитеческого решения\n");
 	printf("\nВсего корней при t = %f:\t%d\n", t, countOfRoots);
-	fftw_complex sum = 0;
-	double E = -2;
-	double findWithClose;
+	fftw_complex sum = 0;//I_0(t);
+	double alphaAsRoot = sqrt(2 * EPS);
+	//double findWithClose;
 	int a = 0;
 	
-	if((countOfRootsPrev<countOfRoots) && a)
+	/*if((countOfRootsPrev<countOfRoots) && a)
 	{
 		findWithClose = roots[0];
 		a = 1;
-	}
+	}*/
 	
 	for(int i = 0; i<countOfRoots; i++)
 	{	
-		if(abs(roots[i]-findWithClose)<0.5)
+		/*if(abs(roots[i]-findWithClose)<0.5)
 		{
 			printf("Берется корень: %f\n", roots[i]);
 			double S_1 = S_integrate(roots[i], t) + E*(t-roots[i]);
 			double d = - E * ( f(roots[i], 0) ); 
 			sum += cexp(I * S_1)/(csqrt(d) * cpow( t - roots[i] , 3.0/2.0));	
 			findWithClose = roots[i];
-		}	
+		}	*/
 		
 		
 		
-		/*
-		double S_1 = S_integrate(roots[i], t) + E*(t-roots[i]);
-		double d = - E * ( f(roots[i], 0) ); //-
+		
+		double S_1 = S_integrate(roots[i], t) + EPS*(t-roots[i]);
+		double d = alphaAsRoot * ( f(roots[i], 0) ); //-
 			//( 1/( (roots[i] - t)*(roots[i] - t) ) * 
 			//A_integrate(roots[i], t) - A_evaluate(roots[i], 0) / (t - roots[i])) );
 		sum += cexp(I * S_1)/(csqrt(d) * cpow( t - roots[i] , 3.0/2.0));	
@@ -143,6 +160,7 @@ double GetAnalyticSolve(double t, int countOfRoots, double* roots)
 		//printf("E*(t-roots[i]) = %f\n", E*(t-roots[i]));
 		//printf("cexp(I * S_integrate(roots[i], t) + E*(t-roots[i])) = %f\n", creal(cexp(I * S_integrate(roots[i], t) + E*(t-roots[i]))));*/
 	}	
+	sum *= 1/csqrt(PI*I);
 	printf("Value = %f\n", creal(sum)*creal(sum) + cimag(sum)*cimag(sum));
 	return creal(sum)*creal(sum) + cimag(sum)*cimag(sum);
 }
@@ -171,9 +189,8 @@ int main()
 	//----------------------PrintS
 	
 	double roots[50];
-	int countOfRootsPrev = FindRoots( 3 , roots );
 	
-	for(double t = 7; t<12; t+=1)
+	for(double t = 0; t<40; t+=0.5)
 	{		
 		int countOfRoots = FindRoots( t , roots );
 		for(int j = 0; j<countOfRoots; j++)
@@ -304,7 +321,7 @@ double GetEvalSolve(double t)
 			continue;
 		}
 		
-		in[i] = cexp(I * 1 * tempT) 
+		in[i] = cexp(I * EPS * tempT) 
 			/ cpow(tempT, 3.0/2.0) 
 			* (cexp(I * S_integrate_new(t-tempT, t)) - 1);
 		i++;	
@@ -314,6 +331,7 @@ double GetEvalSolve(double t)
 	p = fftw_plan_dft_1d(NPOINTS, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
 	
 	fftw_execute(p);    
+	out[0] *= 1/csqrt(2*PI*I);
 	double result = creal(out[0])*creal(out[0]) + cimag(out[0])*cimag(out[0]);
 	free(out);
 	fftw_destroy_plan(p);
