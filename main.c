@@ -151,9 +151,9 @@ double GetAnalyticSolve(double t, int countOfRoots, double* roots)
 		
 		
 		double S_1 = S_integrate(roots[i], t) + EPS*(t-roots[i]);
-		double d = alphaAsRoot * ( f(roots[i], 0) ); //-
-			//( 1/( (roots[i] - t)*(roots[i] - t) ) * 
-			//A_integrate(roots[i], t) - A_evaluate(roots[i], 0) / (t - roots[i])) );
+		double d = alphaAsRoot * (( f(roots[i], 0) ) -
+			( 1/( (roots[i] - t)*(roots[i] - t) ) * 
+			A_integrate(roots[i], t) + A_evaluate(roots[i], 0) / (t - roots[i])));
 		sum += cexp(I * S_1)/(csqrt(d) * cpow( t - roots[i] , 3.0/2.0));	
 		//printf("d = %f\n", d);	
 		//printf("S_integrate(roots[i], t) = %f\n", creal(S_integrate(roots[i], t)));	
@@ -190,7 +190,7 @@ int main()
 	
 	double roots[50];
 	
-	for(double t = 0; t<40; t+=0.5)
+	for(double t = 40; t<50; t+=0.5)
 	{		
 		int countOfRoots = FindRoots( t , roots );
 		for(int j = 0; j<countOfRoots; j++)
