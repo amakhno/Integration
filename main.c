@@ -9,7 +9,7 @@
 #include <gsl/gsl_roots.h>
 #include <gsl/gsl_errno.h>
  
-#define EPS 0.5
+#define EPS 0.8
 #define H 1.054572e-27
 #define PIM4 0.7511255444649425 
 #define PI 3.14159265359
@@ -20,7 +20,7 @@
 #define ALPHA 4.472135955
 #define SIZE 20
 #define NUM_POINTS 64
-#define NPOINTS 100	//
+#define NPOINTS 10000	//
 #define END_ROOT_FIND 30
 
 
@@ -33,6 +33,7 @@ double S_integrate_new(double tau, double t);
 double S_integrate_func_new(double eps, void * params);
 double Alpha2(double t1, double t);
 double GetEvalSolve(double t);
+double GetEvalSolve2(double t);
 
 double countOfRootsPrev = 0;
 
@@ -59,6 +60,16 @@ double quadratic (double t0, void *params)
   return Alpha2(t0, t)-sqrt(EPS);
 }
 
+double quadratic2 (double t0, void *params)
+{
+  struct quadratic_params *p 
+    = (struct quadratic_params *) params;
+
+  double t = p->t;
+
+  return Alpha2(t0, t)+sqrt(EPS);
+}
+
 int FindRoots(double t, double* roots)
 {
 	gsl_function AlphaFunc;
@@ -69,7 +80,7 @@ int FindRoots(double t, double* roots)
 	AlphaFunc.params = &params;
 	T = gsl_root_fsolver_brent;
 	s = gsl_root_fsolver_alloc (T);	
-	double h = 0.2;
+	double h = 0.5;
 	/*FILE *alpha;
 	alpha = fopen("alpha.txt", "w");
 	printf("t = %f'n", t);
@@ -80,7 +91,7 @@ int FindRoots(double t, double* roots)
 	fclose(alpha);*/
 	double t1_hi = t, t1_lo = t - h;
 	int countOfRoots = 0;
-	while( t1_lo > -30 )
+	while( t1_lo > -10 )
 	{
 		if ((quadratic(t1_lo, &params)) * (quadratic(t1_hi, &params)) < 0)
 		{
@@ -105,6 +116,47 @@ int FindRoots(double t, double* roots)
 		t1_hi = t1_lo;
 		t1_lo -= h;
 	}
+	
+	
+	AlphaFunc.function = &quadratic2;
+	AlphaFunc.params = &params;
+	h = 0.5;
+	/*FILE *alpha;
+	alpha = fopen("alpha.txt", "w");
+	printf("t = %f'n", t);
+	for(double i = -30; i<t; i+=0.5)
+	{
+		fprintf(alpha, "%f %f\n", i, quadratic(i, &params));
+	}
+	fclose(alpha);*/
+	t1_hi = t, t1_lo = t - h;
+	while( t1_lo > -10 )
+	{
+		if ((quadratic2(t1_lo, &params)) * (quadratic2(t1_hi, &params)) < 0)
+		{
+			gsl_root_fsolver_set (s, &AlphaFunc, t1_lo, t1_hi);			
+			int iter = 0;
+			int status = 0;
+			do
+			{
+				iter++;
+				status = gsl_root_fsolver_iterate (s);
+				roots[countOfRoots] = gsl_root_fsolver_root (s);
+				t1_lo = gsl_root_fsolver_x_lower (s);
+				t1_hi = gsl_root_fsolver_x_upper (s);
+				status = gsl_root_test_interval (t1_lo, t1_hi,
+                                       0, 0.001);
+			}
+			while (status == GSL_CONTINUE && iter < 1000);
+			countOfRoots++;
+			t1_hi = t1_lo;
+			t1_lo -= h;
+		}
+		t1_hi = t1_lo;
+		t1_lo -= h;
+	}
+	
+	
 	printf("\nНа промежутке [%f, %f]\n", t1_lo, t);
 	for(int i = 0; i<countOfRoots; i++)
 	{
@@ -170,10 +222,12 @@ int main()
 	printf("A(5) = %f\n", A_evaluate(5, 0));
 	printf("A_integrate(5, 6) = %f\n", A_integrate(5, 6));
 	printf("S(5, 6) = %f\n", S_integrate_new(5, 6));
-	FILE *f;
-	f = fopen("analytical.txt", "w");
+	//FILE *f;
+	//f = fopen("analytical.txt", "w");
 	FILE *f1;
 	f1 = fopen("numerical.txt", "w");
+	FILE *f3;
+	f3 = fopen("S_0.txt", "w");
 	FILE *f2;
 	f2 = fopen("roots.txt", "w");
 	
@@ -190,22 +244,28 @@ int main()
 	
 	double roots[50];
 	
-	for(double t = 40; t<50; t+=0.5)
+	for(double t = 30; t<50; t+=1)
 	{		
-		int countOfRoots = FindRoots( t , roots );
+		/*int countOfRoots = FindRoots( t , roots );
 		for(int j = 0; j<countOfRoots; j++)
 		{
 			fprintf(f2, "%3.10f %3.10f\n", t, roots[j]);
 		}
 		
-		double m1 = GetAnalyticSolve( t , countOfRoots, roots );
+		double m1 = GetAnalyticSolve( t , countOfRoots, roots );*/
+		printf("s = %f\n", GetEvalSolve2(0));
 		double m2 = GetEvalSolve( t );
-		fprintf(f, "%f %f\n", t , m1);
+		printf("t = %f\n", t);
+		//double m3 = GetEvalSolve2( t );
+		/*printf("S_0 = %f\n", m3);*/
+		//fprintf(f, "%f %f\n", t , m1);
 		fprintf(f1, "%f %f\n", t, m2);
+		//fprintf(f3, "%f %f\n", t, m3);
 	}
-	fclose(f);
+	//fclose(f);
 	fclose(f1);
 	fclose(f2);	
+	fclose(f3);
 	return 0;
 }
 
@@ -287,6 +347,30 @@ double S_integrate_func_new(double eps, void * params)
 	return temp*temp;
 }
 
+/*double I_integrate(double tau, double t)
+{
+	double Aint = A_integrate(tau, t)/(t-tau);
+	struct S_integrate_params params = { t };
+	double result, error;
+	gsl_function F;
+	F.function = &S_integrate_func_new;
+	F.params = &params;
+	gsl_integration_workspace * b = gsl_integration_workspace_alloc (10000);
+	gsl_integration_qags (&F, tau, t, 1e-13, 0, 10000, b, &result, &error); 
+	gsl_integration_workspace_free (b);
+	return -result/2.0;
+}
+
+double I_integrate_func(double tau, void * params)
+{	
+	struct S_integrate_params *p 
+    = (struct S_integrate_params *) t;
+	double Aint = p->Aint;//1/csqrt(2*PI*I)
+	ftw_complex temp = cexp(I*EPS*tau)/(pow(tau, 3.0/2.0)) * (cexp(-I*f(tau)))
+	/*(A(eps) - intA(tau, t)/(t-tau))*/
+	//return temp*temp;
+
+
 //Функця по которой решается уравнение
 double Alpha2(double t1, double t)
 {
@@ -307,7 +391,7 @@ double GetEvalSolve(double t)
     in = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * NPOINTS);
     out = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * NPOINTS);
     
-	double tempEnd = 50;
+	double tempEnd = 150;
 	double step = tempEnd / NPOINTS;
 	double tempPower;	
 	int i = 0;	
@@ -329,11 +413,52 @@ double GetEvalSolve(double t)
 	}
 	
 	p = fftw_plan_dft_1d(NPOINTS, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
-	
+	in[0] *= 1/csqrt(2*PI*I);
 	fftw_execute(p);    
-	out[0] *= 1/csqrt(2*PI*I);
 	double result = creal(out[0])*creal(out[0]) + cimag(out[0])*cimag(out[0]);
 	free(out);
+	fftw_destroy_plan(p);
+	return result;
+}
+
+double GetEvalSolve2(double t)
+{
+	fftw_complex *in, *out;
+    fftw_plan p;
+    
+    in = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * NPOINTS);
+    out = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * NPOINTS);
+    
+	double tempEnd = 500;
+	double step = tempEnd / NPOINTS;
+	double tempPower;	
+		
+	int i = 0;	
+	
+	for(double tempT = 0; tempT < tempEnd; tempT+=step)
+	{
+		if(!tempT)
+		{
+			in[i] = 1;
+			i++;
+			continue;
+		}
+		/*printf("tempT = %f\n", tempT);
+		printf("f = %f\n", f(t, 0));;
+		double S_0=-f(t,0)*f(t,0)/24*tempT*tempT*tempT;
+		printf("double S_0 = %f\n", S_0);*/
+		in[i] = 1/NPOINTS*sin(tempT)*sin(tempT)/tempT/tempT;/*cexp(I * EPS * tempT) 
+			/ cpow(tempT, 3.0/2.0) 
+			* (cexp(I * S_0) - 1);*/
+		i++;	
+		
+	}
+	
+	p = fftw_plan_dft_1d(NPOINTS, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
+	//in[0] *= 1/csqrt(2*PI*I);
+	fftw_execute(p);    
+	double result = creal(out[0])*creal(out[0]) + cimag(out[0])*cimag(out[0]);
+	//free(out);
 	fftw_destroy_plan(p);
 	return result;
 }
