@@ -8,20 +8,23 @@
 #include <gsl/gsl_math.h>
 #include <gsl/gsl_roots.h>
 #include <gsl/gsl_errno.h>
+#include "omp.h"
  
-#define EPS 0.4
+#define TBEGIN (-20.0)
+#define TEND (20.0)
+#define TSTEP (0.1)
+#define EPS 0.5
 #define H 1.054572e-27
 #define PIM4 0.7511255444649425 
 #define PI 3.14159265359
 #define _GNU_SOURCE
-#define OMEGA 0.8
-#define F0 2.0
+#define OMEGA 1
+#define F0 1
 #define ALPHA 4.472135955
-#define NPOINTS (128.0)	//
+#define NPOINTS (1024.0)	//
 
 
 double f(double x, void * params);
-void loadBar(int x, int n, int w);
 double A_evaluate(double t, void * params);
 double A_integrate(double t1, double t);
 double S_integrate_new(double tau, double t);
@@ -77,14 +80,6 @@ int FindRoots(double t, double* roots)
 	T = gsl_root_fsolver_brent;
 	s = gsl_root_fsolver_alloc (T);	
 	double h = 0.5;
-	/*FILE *alpha;
-	alpha = fopen("alpha.txt", "w");
-	printf("t = %f'n", t);
-	for(double i = -30; i<t; i+=0.5)
-	{
-		fprintf(alpha, "%f %f\n", i, quadratic(i, &params));
-	}
-	fclose(alpha);*/
 	double t1_hi = t, t1_lo = t - h;
 	int countOfRoots = 0;
 	while( t1_lo > -10 )
@@ -117,14 +112,6 @@ int FindRoots(double t, double* roots)
 	AlphaFunc.function = &quadratic2;
 	AlphaFunc.params = &params;
 	h = 0.5;
-	/*FILE *alpha;
-	alpha = fopen("alpha.txt", "w");
-	printf("t = %f'n", t);
-	for(double i = -30; i<t; i+=0.5)
-	{
-		fprintf(alpha, "%f %f\n", i, quadratic(i, &params));
-	}
-	fclose(alpha);*/
 	t1_hi = t, t1_lo = t - h;
 	while( t1_lo > -10 )
 	{
@@ -151,67 +138,11 @@ int FindRoots(double t, double* roots)
 		t1_hi = t1_lo;
 		t1_lo -= h;
 	}
-	
-	
-	/*printf("\nНа промежутке [%f, %f]\n", t1_lo, t);
-	for(int i = 0; i<countOfRoots; i++)
-	{
-		printf("Корень %d: %f\n", i, roots[i]);
-	}*/
 	gsl_root_fsolver_free (s);
 	return countOfRoots;
 }
 
-fftw_complex I_0(double t)
-{
-	fftw_complex f1 = 3/8 * sqrt(2) * sqrt(PI) / ( csqrt(I*PI) * cpow(abs(EPS), 5/2) );
-	fftw_complex A2 = (-I * f(t, 0)*f(t, 0)/24);
-	return f1*A2;
-}
 
-double GetAnalyticSolve(double t, int countOfRoots, double* roots)
-{
-	//printf("\nПоиска аналитеческого решения\n");
-	//printf("\nВсего корней при t = %f:\t%d\n", t, countOfRoots);
-	fftw_complex sum = 0;//I_0(t);
-	double alphaAsRoot = sqrt(2 * EPS);
-	//double findWithClose;
-	int a = 0;
-	
-	/*if((countOfRootsPrev<countOfRoots) && a)
-	{
-		findWithClose = roots[0];
-		a = 1;
-	}*/
-	
-	for(int i = 0; i<countOfRoots; i++)
-	{	
-		/*if(abs(roots[i]-findWithClose)<0.5)
-		{
-			printf("Берется корень: %f\n", roots[i]);
-			double S_1 = S_integrate(roots[i], t) + E*(t-roots[i]);
-			double d = - E * ( f(roots[i], 0) ); 
-			sum += cexp(I * S_1)/(csqrt(d) * cpow( t - roots[i] , 3.0/2.0));	
-			findWithClose = roots[i];
-		}	*/
-		//printf("Alpha = %f", Alpha2(roots[i], t));
-		
-		
-		
-		double S_1 = S_integrate_new(roots[i], t) + EPS*(t-roots[i]);
-		double d = Alpha2(roots[i], t) * (( f(roots[i], 0) ) -
-			( 1/( (roots[i] - t)*(roots[i] - t) ) * 
-			A_integrate(roots[i], t) + A_evaluate(roots[i], 0) / (t - roots[i])));
-		sum += cexp(I * S_1)/(csqrt(d) * cpow( t - roots[i] , 3.0/2.0));	
-		//printf("d = %f\n", d);	
-		//printf("S_integrate(roots[i], t) = %f\n", creal(S_integrate(roots[i], t)));	
-		//printf("E*(t-roots[i]) = %f\n", E*(t-roots[i]));
-		//printf("cexp(I * S_integrate(roots[i], t) + E*(t-roots[i])) = %f\n", creal(cexp(I * S_integrate(roots[i], t) + E*(t-roots[i]))));*/
-	}	
-	sum *= csqrt(2);//PI*I);
-	//printf("Value = %f\n", creal(sum)*creal(sum) + cimag(sum)*cimag(sum));
-	return creal(sum)*creal(sum) + cimag(sum)*cimag(sum);
-}
 
 int main()
 {
@@ -219,74 +150,63 @@ int main()
 	f = fopen("analytical.txt", "w");
 	FILE *f1;
 	f1 = fopen("numerical.txt", "w");
-	//FILE *f3;
-	//f3 = fopen("S_0.txt", "w");
 	FILE *f2;
 	f2 = fopen("roots.txt", "w");
+	double tBegin = TBEGIN, tEnd = TEND, tStep = TSTEP;
+	int steps = (int)(tEnd-tBegin)/tStep + 1;
+	double* m1 = (double*) malloc(sizeof(double) * steps);
+	double* m2 = (double*) malloc(sizeof(double) * steps);
 	
-	//----------------------PrintS
-	/*FILE *f3;
-	f3 = fopen("S.txt", "w");	
-	for(double t1 = -6; t1<5.9; t1+=0.1)
-	{
-		printf("t1 = %f\n", t1);
-		fprintf(f3, "%f %f\n", t1 , S_integrate_new(t1, 6.0));
-	}
-	fclose(f3);*/
-	//----------------------PrintS
-	printf("%f = %f\n", log(2)*log(2) ,GetEvalSolve2(0));
-	double roots[50];
-	double tBegin = 40, tEnd = 45, tStep = 1;
-	for(double t = tBegin; t<tEnd; t+=tStep)
-	{		
-		int countOfRoots = FindRoots( t , roots );
-		printf("t = %2.15f\n", t);
-		/*for(int j = 0; j<countOfRoots; j++)
+	//#pragma omp parallel for shared (m1, m2)
+	for(int i = 0; i<steps; i++)
+	{				
+		//fprintf(f2, "%2.15f %2.15f\n", tBegin + i*tStep, GetEvalSolve2(tBegin + i*tStep)
+		double t = tBegin + i*tStep;
+		fprintf(f, "%f %f\n" ,t, Alpha2(t, 20));
+		/*printf("T = %f\n", t);
+		double roots[20];
+		int countOfRoots = FindRoots( tBegin + i*tStep , roots );
+		
+		for(int j = 0; j<countOfRoots; j++)
 		{
 			fprintf(f2, "%3.10f %3.10f\n", t, roots[j]);
-		}*/
+		}
 		
 		double m1 = GetAnalyticSolve( t , countOfRoots, roots );		
-		double m2 = GetEvalSolve3( t );
-		//double m3 = GetEvalSolve2( t );
-		/*printf("S_0 = %f\n", m3);*/
-		fprintf(f, "%2.15f %2.15f\n", t , m1);
+		double m2 = GetEvalSolve3( t );		
 		printf("M_analytic(eps, t) = %2.15f\n", m1);
 		printf("M_numerical(eps, t) = %2.15f\n", m2);
-		fprintf(f1, "%2.15f %2.15f\n", t, m2);
-		//fprintf(f3, "%f %f\n", t, m3);
+		fprintf(f, "%2.15f %2.15f\n", t , m1);
+		fprintf(f1, "%2.15f %2.15f\n", t, m2);*/
 	}
+	
 	fclose(f);
 	fclose(f1);
 	fclose(f2);	
-	//fclose(f3);
 	return 0;
+}
+
+double GetAnalyticSolve(double t, int countOfRoots, double* roots)
+{
+	complex sum = 0;
+
+	int a = 0;
+	
+	for(int i = 0; i<countOfRoots; i++)
+	{	
+		double S_1 = S_integrate_new(roots[i], t) + EPS*(t-roots[i]);
+		double d = Alpha2(roots[i], t) * (( f(roots[i], 0) ) -
+			( 1/( (roots[i] - t)*(roots[i] - t) ) * 
+			A_integrate(roots[i], t) + A_evaluate(roots[i], 0) / (t - roots[i])));
+		sum += cexp(I * S_1)/(csqrt(d) * cpow( t - roots[i] , 3.0/2.0));	
+	}	
+	sum *= csqrt(2);
+	return creal(sum)*creal(sum) + cimag(sum)*cimag(sum);
 }
 
 double f (double x, void * params) 
 {
   return -F0*exp(-(x*x)/(ALPHA*ALPHA))*cos(OMEGA*x);
-}
-
-void loadBar(int x, int n, int w)
-{ 
-    // Calculuate the ratio of complete-to-incomplete.
-    float ratio = x/(float)n;
-    int c = ratio * w;
- 
-    // Show the percentage complete.
-    printf("%3d%% [", (int)(ratio*100) );
- 
-    // Show the load bar.
-    for (int x=0; x<c; x++)
-       printf("=");
- 
-    for (int x=c; x<w; x++)
-       printf(" ");
- 
-    // ANSI Control codes to go back to the
-    // previous line and clear it.
-    printf("]\n\033[F\033[J");
 }
 
 //A как интеграл от f
@@ -300,7 +220,7 @@ double A_evaluate(double t, void * params)
 	F.function = &f;
 	F.params = &alpha;
 	gsl_integration_workspace * w = gsl_integration_workspace_alloc (1000000);
-	gsl_integration_qags (&F, t1, t, 1e-9, 0, 1000000, w, &result, &error); 
+	gsl_integration_qags (&F, t1, t, 1e-7, 0, 1000000, w, &result, &error); 
 	gsl_integration_workspace_free (w);
 	return result;
 }
@@ -315,7 +235,7 @@ double A_integrate(double t1, double t)
 	F.function = &A_evaluate;
 	F.params = &alpha;
 	gsl_integration_workspace * a = gsl_integration_workspace_alloc (10000);
-	gsl_integration_qags (&F, t1, t, 1e-9, 0, 10000, a, &result, &error); 
+	gsl_integration_qags (&F, t1, t, 1e-7, 0, 10000, a, &result, &error); 
 	gsl_integration_workspace_free (a);
 	return result;
 	
@@ -325,6 +245,10 @@ double A_integrate(double t1, double t)
 //Под интегралом функция S_integrate_func
 double S_integrate_new(double tau, double t)
 {
+	if (tau >= t)
+	{
+		return 0;
+	}
 	double Aint = A_integrate(tau, t)/(t-tau);
 	struct S_integrate_params params = { Aint };
 	double result, error;
@@ -332,7 +256,7 @@ double S_integrate_new(double tau, double t)
 	F.function = &S_integrate_func_new;
 	F.params = &params;
 	gsl_integration_workspace * b = gsl_integration_workspace_alloc (10000);
-	gsl_integration_qags (&F, tau, t, 1e-9, 0, 10000, b, &result, &error); 
+	gsl_integration_qags (&F, tau, t, 1e-7, 0, 10000, b, &result, &error); 
 	gsl_integration_workspace_free (b);
 	return -result/2.0;
 }
@@ -362,19 +286,19 @@ double S_integrate_func(double eps, void * params)
 
 double GetEvalSolve3(double t)
 {    
-	double tempEnd = 300;
+	double tempEnd = 350;
 	double step = tempEnd / NPOINTS;
 	double tempPower;	
 	int i = 0;	
 	complex sum = 0;
 	
-	for(double tempT = step; tempT < tempEnd; tempT+=step)
+	for(int i = 1; i < (int)NPOINTS; i++)
 	{
-		sum += cexp(I * EPS * tempT) 
-			/ cpow(tempT, 3.0/2.0) 
-			* (cexp(I * S_integrate_new(t-tempT, t)) - 1);		
+		sum += cexp(I * EPS * i*step) 
+			/ cpow(i*step, 3.0/2.0) 
+			* (cexp(I * S_integrate_new(t-i*step, t)) - 1);
 	}
-	
+
 	sum *= step;
 	sum *=1/csqrt(2*PI*I);
 	double result = creal(sum)*creal(sum) + cimag(sum)*cimag(sum);
@@ -389,7 +313,7 @@ double GetEvalSolve(double t)
     in = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * NPOINTS);
     out = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * NPOINTS);
     
-	double tempEnd = 300;
+	double tempEnd = 200;
 	double step = tempEnd / NPOINTS;
 	double tempPower;	
 	int i = 0;	
@@ -420,7 +344,7 @@ double GetEvalSolve(double t)
 	return result;
 }
 
-double GetEvalSolve2(double t)
+double GetEvalSolveS_0(double t)
 {
 	fftw_complex *in, *out;
     fftw_plan p;
@@ -442,13 +366,11 @@ double GetEvalSolve2(double t)
 			i++;
 			continue;
 		}
-		/*printf("tempT = %f\n", tempT);
-		printf("f = %f\n", f(t, 0));;
 		double S_0=-f(t,0)*f(t,0)/24*tempT*tempT*tempT;
-		printf("double S_0 = %f\n", S_0);*/
-		in[i] = pow(sin(tempT), 4)/pow(tempT, 3);/*cexp(I * EPS * tempT) 
+		printf("double S_0 = %f\n", S_0);
+		in[i] = cexp(I * EPS * tempT) 
 			/ cpow(tempT, 3.0/2.0) 
-			* (cexp(I * S_0) - 1);*/
+			* (cexp(I * S_0) - 1);
 		i++;			
 	}
 	
@@ -458,7 +380,7 @@ double GetEvalSolve2(double t)
 	out[0]*=1.0/NPOINTS;
 	out[0]*=tempEnd;
 	double result = creal(out[0])*creal(out[0]) + cimag(out[0])*cimag(out[0]);
-	//free(out);
+	free(out);
 	fftw_destroy_plan(p);
 	return result;
 }
