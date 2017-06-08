@@ -3,7 +3,7 @@ reset
 # eps
 set encoding koi8r
 set terminal postscript eps size 3.5,2.62 enhanced color font 'Helvetica,15' lw 0.5
-set output 'S.eps'
+set output 'I_0.eps'
 set xzeroaxis
 # Line styles
 set termoption dash
@@ -15,9 +15,9 @@ set style line 3 dt 4 linecolor rgb '#000000' linetype 1 linewidth 2  # red
 set key at 15, -140
 # Axes label 
 set xlabel "{/Helvetica-Oblique ๗าลอั, t\'}"
-set ylabel "I{/Helvetica-Oblique (eps, t)}"
+set ylabel "M_0 (eps, t)"
 # Axis ranges
-#set xrange[20:70]
+set xrange[0:20]
 set yrange[-0.1:0.3]
 # Plot
 plot	'I_0.txt' title "I{/Helvetica-Oblique (eps, t)}" with line ls 1, \

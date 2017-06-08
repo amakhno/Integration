@@ -146,10 +146,10 @@ int FindRoots(double t, double* roots)
 
 int main()
 {
-	FILE *f;
-	f = fopen("analytical.txt", "w");
+	FILE *f44;
+	f44 = fopen("f.txt", "w");
 	FILE *f1;
-	f1 = fopen("numerical.txt", "w");
+	f1 = fopen("a.txt", "w");
 	FILE *f2;
 	f2 = fopen("roots.txt", "w");
 	double tBegin = TBEGIN, tEnd = TEND, tStep = TSTEP;
@@ -162,7 +162,8 @@ int main()
 	{				
 		//fprintf(f2, "%2.15f %2.15f\n", tBegin + i*tStep, GetEvalSolve2(tBegin + i*tStep)
 		double t = tBegin + i*tStep;
-		fprintf(f, "%f %f\n" ,t, Alpha2(t, 20));
+		fprintf(f44, "%f %2.15f\n" ,t, f(t, 0));
+		fprintf(f1, "%f %2.15f\n", t, A_evaluate(t, 0));
 		/*printf("T = %f\n", t);
 		double roots[20];
 		int countOfRoots = FindRoots( tBegin + i*tStep , roots );
@@ -180,7 +181,7 @@ int main()
 		fprintf(f1, "%2.15f %2.15f\n", t, m2);*/
 	}
 	
-	fclose(f);
+	fclose(f44);
 	fclose(f1);
 	fclose(f2);	
 	return 0;

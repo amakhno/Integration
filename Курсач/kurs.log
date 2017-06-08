@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.4.10)  2 MAY 2017 10:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.18)  8 JUN 2017 11:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **kurs.tex
 (./kurs.tex
 LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/extsizes/extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/extsizes/size14.clo
@@ -992,8 +992,6 @@ File: babel.def 2016/02/24 3.9q Babel common definitions
 \babel@savecnt=\count114
 \U@D=\dimen134
 )
-\l@british = a dialect from \language\l@english 
-\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
@@ -1797,8 +1795,14 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\PD1\cyrya' on input line 102.
 
+
+LaTeX Warning: Citation `Urmat' on page 4 undefined on input line 121.
+
 [4]
 
+LaTeX Warning: Citation `Fedoryuk' on page 5 undefined on input line 143.
+
+
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\<def>-command' on input line 152.
 
@@ -2414,14 +2418,22 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\PD1\cyra' on input line 152.
 
-[5] [6] [7] <pic2.png, id=113, 435.87843pt x 447.92343pt>
-File: pic2.png Graphic file (type png)
- <use pic2.png>
-Package pdftex.def Info: pic2.png used on input line 231.
-(pdftex.def)             Requested size: 150.14671pt x 154.29453pt.
+[5] [6]
 
-[8 <./pic2.png>]
-Overfull \hbox (25.86377pt too wide) in paragraph at lines 265--266
+LaTeX Warning: Citation `GSL:website' on page 7 undefined on input line 222.
+
+
+LaTeX Warning: Reference `ris:image2' on page 7 undefined on input line 228.
+
+[7]
+
+LaTeX Warning: Reference `ris:image2' on page 8 undefined on input line 242.
+
+
+LaTeX Warning: Citation `Lavrentyev' on page 8 undefined on input line 255.
+
+[8]
+Overfull \hbox (25.86377pt too wide) in paragraph at lines 261--262
 []\T2A/cmr/m/n/14.4 Выпишем пер-вый член это-го раз-ло-же-ния. Обо-зна-чим $\OM
 L/cmm/m/it/14.4 ^^^\OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14.4 z\OT1/cmr/m/n/14.4 (\O
 ML/cmm/m/it/14.4 t\OT1/cmr/m/n/14.4 )]\OML/cmm/m/it/14.4 z[] \OT1/cmr/m/n/14.4 
@@ -2431,7 +2443,7 @@ t/14.4 t\OT1/cmr/m/n/14.4 )] =
  []
 
 
-Overfull \hbox (19.62798pt too wide) in paragraph at lines 272--273
+Overfull \hbox (19.62798pt too wide) in paragraph at lines 268--269
 []\T2A/cmr/m/n/14.4 Имеем: $[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 t[]\OT1/cmr
 /m/n/14.4 ) = \OML/cmm/m/it/14.4 ^^^\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 z[]\O
 T1/cmr/m/n/14.4 )\OML/cmm/m/it/14.4 z[]\OT1/cmr/m/n/14.4 (\OML/cmm/m/it/14.4 t[
@@ -2443,1949 +2455,1839 @@ cmm/m/it/14.4 i[]f\OT1/cmr/m/n/14.4 [\OML/cmm/m/it/14.4 z\OT1/cmr/m/n/14.4 (\OM
 L/cmm/m/it/14.4 t\OT1/cmr/m/n/14.4 )] =
  []
 
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\CYRA' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\CYRA' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\CYRA' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\CYRA' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrp' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrp' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrp' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrp' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrp' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrp' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrp' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrp' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrr' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrr' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrr' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrr' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyro' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyro' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyro' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyro' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrk' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrk' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrk' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrk' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrs' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrs' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrs' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrs' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyri' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyri' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyri' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyri' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrm' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrm' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrm' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrm' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyra' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyra' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyra' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyra' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrc' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrc' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrc' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrc' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyri' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyri' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyri' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyri' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrya' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrya' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrya' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrya' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyri' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyri' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyri' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyri' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrn' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrn' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrn' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrn' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrt' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrt' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrt' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrt' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyre' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyre' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyre' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyre' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrg' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrg' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrg' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrg' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrr' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrr' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrr' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrr' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyra' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyra' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyra' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyra' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrl' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrl' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrl' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrl' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyra' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyra' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyra' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyra' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\CYRB' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\CYRB' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\CYRB' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\CYRB' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyre' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyre' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyre' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyre' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrs' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrs' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrs' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrs' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrs' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrs' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrs' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrs' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyre' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyre' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyre' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyre' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrl' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrl' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrl' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrl' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrya' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\global' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrya' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\?\cyrya' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\PD1\cyrya' on input line 290.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 291.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\alpha' on input line 291.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 291.
+
 [9pdfTeX warning (ext4): destination with the same identifier (name{equation.2.
 10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.289 
-      pdfTeX warning (ext4): destination with the same identifier (name{equatio
-n.2.10}) has been already used, duplicate ignored
+l.294 \begin{equation}
+                      \label{eq:eq14}pdfTeX warning (ext4): destination with th
+e same identifier (name{equation.2.10}) has been already used, duplicate ignore
+d
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.289 
-      ]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\CYRA' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\CYRA' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\CYRA' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\CYRA' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrp' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrp' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrp' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrp' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrp' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrp' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrp' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrp' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrr' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrr' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrr' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrr' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyro' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyro' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyro' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyro' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrk' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrk' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrk' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrk' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrs' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrs' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrs' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrs' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyri' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyri' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyri' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyri' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrm' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrm' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrm' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrm' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyra' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyra' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyra' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyra' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrc' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrc' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrc' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrc' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyri' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyri' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyri' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyri' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrya' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrya' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrya' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrya' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyri' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyri' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyri' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyri' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrn' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrn' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrn' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrn' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrt' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrt' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrt' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrt' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyre' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyre' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyre' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyre' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrg' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrg' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrg' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrg' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrr' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrr' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrr' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrr' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyra' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyra' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyra' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyra' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrl' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrl' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrl' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrl' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyra' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyra' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyra' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyra' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\CYRB' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\CYRB' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\CYRB' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\CYRB' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyre' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyre' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyre' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyre' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrs' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrs' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrs' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrs' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrs' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrs' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrs' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrs' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyre' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyre' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyre' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyre' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrl' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrl' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrl' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrl' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrya' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrya' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrya' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrya' on input line 294.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 295.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 295.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 295.
-
-[10pdfTeX warning (ext4): destination with the same identifier (name{equation.3
-.12}) has been already used, duplicate ignored
+l.294 \begin{equation}
+                      \label{eq:eq14}] [10pdfTeX warning (ext4): destination wi
+th the same identifier (name{equation.3.12}) has been already used, duplicate i
+gnored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.326 
-      ]pdfTeX warning (ext4): destination with the same identifier (name{equati
-on.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.328 \begin{equation}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.328 \begin{equation}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.328 \begin{equation}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.328 \begin{equation}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.334 \begin{equation}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.334 \begin{equation}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.334 \begin{equation}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.334 \begin{equation}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.338 \begin{equation}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.338 \begin{equation}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.338 \begin{equation}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.338 \begin{equation}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.342 \begin{equation}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.342 \begin{equation}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.342 \begin{equation}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.342 \begin{equation}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.350 \begin{eqnarray}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.350 \begin{eqnarray}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.350 \begin{eqnarray}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.350 \begin{eqnarray}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.358 \begin{eqnarray}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.358 \begin{eqnarray}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.358 \begin{eqnarray}
-                      \nonumberpdfTeX warning (ext4): destination with the same
- identifier (name{equation.3.13}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.358 \begin{eqnarray}
-                      \nonumber <pic3.png, id=153, 401.5pt x 401.5pt>
-File: pic3.png Graphic file (type png)
+l.340 \end{equation}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{equation.3.13}) has been already used, duplicate ignored
 
-<use pic3.png>
-Package pdftex.def Info: pic3.png used on input line 368.
-(pdftex.def)             Requested size: 200.19054pt x 200.192pt.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.340 \end{equation}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{equation.3.13}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.340 \end{equation}
+                    ]pdfTeX warning (ext4): destination with the same identifie
+r (name{equation.3.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.346 \begin{eqnarray}
+                      \nonumberpdfTeX warning (ext4): destination with the same
+ identifier (name{equation.3.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.346 \begin{eqnarray}
+                      \nonumberpdfTeX warning (ext4): destination with the same
+ identifier (name{equation.3.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.346 \begin{eqnarray}
+                      \nonumberpdfTeX warning (ext4): destination with the same
+ identifier (name{equation.3.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.346 \begin{eqnarray}
+                      \nonumberpdfTeX warning (ext4): destination with the same
+ identifier (name{equation.3.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.354 \begin{eqnarray}
+                      \nonumberpdfTeX warning (ext4): destination with the same
+ identifier (name{equation.3.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.354 \begin{eqnarray}
+                      \nonumberpdfTeX warning (ext4): destination with the same
+ identifier (name{equation.3.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.354 \begin{eqnarray}
+                      \nonumberpdfTeX warning (ext4): destination with the same
+ identifier (name{equation.3.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.354 \begin{eqnarray}
+                      \nonumber
+
+LaTeX Warning: Reference `ris:image3' on page 11 undefined on input line 361.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<pic4.png, id=156, 401.5pt x 401.5pt>
-File: pic4.png Graphic file (type png)
- <use pic4.png>
-Package pdftex.def Info: pic4.png used on input line 378.
-(pdftex.def)             Requested size: 225.21626pt x 225.22443pt.
-
-Underfull \hbox (badness 3769) in paragraph at lines 379--379
-[]\T2A/cmr/m/n/14.4 Рис. 3: []Сравнение при-бли-же-ния
- []
-
-<pic5.png, id=157, 401.5pt x 401.5pt>
-File: pic5.png Graphic file (type png)
- <use pic5.png>
-Package pdftex.def Info: pic5.png used on input line 384.
-(pdftex.def)             Requested size: 225.21626pt x 225.22443pt.
+LaTeX Warning: Reference `ris:image4' on page 11 undefined on input line 365.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `ris:image5' on page 11 undefined on input line 365.
 
-[11]
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 401.
+LaTeX Warning: Citation `Wong' on page 11 undefined on input line 375.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 401.
+(hyperref)                removing `math shift' on input line 377.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 401.
+(hyperref)                removing `\alpha' on input line 377.
 
-[12 <./pic3.png (PNG copy)>]pdfTeX warning (ext4): destination with the same id
-entifier (name{equation.3.13}) has been already used, duplicate ignored
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 377.
+
+[11pdfTeX warning (ext4): destination with the same identifier (name{equation.3
+.13}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.383 $$
+        pdfTeX warning (ext4): destination with the same identifier (name{equat
+ion.3.13}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.383 $$
+        ]pdfTeX warning (ext4): destination with the same identifier (name{equa
+tion.3.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.432 \begin{eqnarray}
+l.408 \begin{eqnarray}
                       \nonumberpdfTeX warning (ext4): destination with the same
  identifier (name{equation.3.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.432 \begin{eqnarray}
+l.408 \begin{eqnarray}
                       \nonumberpdfTeX warning (ext4): destination with the same
  identifier (name{equation.3.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.432 \begin{eqnarray}
+l.408 \begin{eqnarray}
                       \nonumberpdfTeX warning (ext4): destination with the same
  identifier (name{equation.3.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.432 \begin{eqnarray}
+l.408 \begin{eqnarray}
                       \nonumberpdfTeX warning (ext4): destination with the same
  identifier (name{equation.3.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.439 \begin{equation}
+l.415 \begin{equation}
                       \nonumberpdfTeX warning (ext4): destination with the same
  identifier (name{equation.3.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.439 \begin{equation}
+l.415 \begin{equation}
                       \nonumberpdfTeX warning (ext4): destination with the same
  identifier (name{equation.3.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.439 \begin{equation}
+l.415 \begin{equation}
                       \nonumberpdfTeX warning (ext4): destination with the same
  identifier (name{equation.3.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.439 \begin{equation}
-                      \nonumber [13 <./pic4.png (PNG copy)> <./pic5.png (PNG co
-py)>]pdfTeX warning (ext4): destination with the same identifier (name{equation
-.3.13}) has been already used, duplicate ignored
+l.415 \begin{equation}
+                      \nonumberpdfTeX warning (ext4): destination with the same
+ identifier (name{equation.3.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.451 \begin{equation}
+l.427 \begin{equation}
                       \label{eq:eq20}pdfTeX warning (ext4): destination with th
 e same identifier (name{equation.3.13}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.451 \begin{equation}
+l.427 \begin{equation}
                       \label{eq:eq20}pdfTeX warning (ext4): destination with th
 e same identifier (name{equation.3.13}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.451 \begin{equation}
+l.427 \begin{equation}
                       \label{eq:eq20}pdfTeX warning (ext4): destination with th
 e same identifier (name{equation.3.13}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.451 \begin{equation}
-                      \label{eq:eq20} <pic6.png, id=183, 401.5pt x 401.5pt>
-File: pic6.png Graphic file (type png)
+l.427 \begin{equation}
+                      \label{eq:eq20} [12]
 
-<use pic6.png>
-Package pdftex.def Info: pic6.png used on input line 461.
-(pdftex.def)             Requested size: 225.21626pt x 225.22443pt.
+LaTeX Warning: Reference `ris:image9' on page 13 undefined on input line 432.
 
-Underfull \hbox (badness 3769) in paragraph at lines 462--462
-[]\T2A/cmr/m/n/14.4 Рис. 5: []Сравнение при-бли-же-ния
- []
 
-<pic7.png, id=184, 401.5pt x 401.5pt>
-File: pic7.png Graphic file (type png)
- <use pic7.png>
-Package pdftex.def Info: pic7.png used on input line 467.
-(pdftex.def)             Requested size: 225.21626pt x 225.22443pt.
+LaTeX Warning: Reference `ris:image11' on page 13 undefined on input line 432.
 
 
+LaTeX Warning: Reference `ris:image9' on page 13 undefined on input line 435.
+
+
+LaTeX Warning: Reference `ris:image4' on page 13 undefined on input line 435.
+
+
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 476.
+(hyperref)                removing `\<def>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\CYRS' on input line 476.
+(hyperref)                removing `\?\CYRS' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 476.
+(hyperref)                removing `\global' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 476.
+(hyperref)                removing `\<let>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\CYRS' on input line 476.
+(hyperref)                removing `\PD1\CYRS' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\CYRS' on input line 476.
+(hyperref)                removing `\?\CYRS' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\CYRS' on input line 476.
+(hyperref)                removing `\PD1\CYRS' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 476.
+(hyperref)                removing `\<def>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrl' on input line 476.
+(hyperref)                removing `\?\cyrl' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 476.
+(hyperref)                removing `\global' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 476.
+(hyperref)                removing `\<let>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrl' on input line 476.
+(hyperref)                removing `\PD1\cyrl' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrl' on input line 476.
+(hyperref)                removing `\?\cyrl' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrl' on input line 476.
+(hyperref)                removing `\PD1\cyrl' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 476.
+(hyperref)                removing `\<def>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyri' on input line 476.
+(hyperref)                removing `\?\cyri' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 476.
+(hyperref)                removing `\global' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 476.
+(hyperref)                removing `\<let>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyri' on input line 476.
+(hyperref)                removing `\PD1\cyri' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyri' on input line 476.
+(hyperref)                removing `\?\cyri' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyri' on input line 476.
+(hyperref)                removing `\PD1\cyri' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 476.
+(hyperref)                removing `\<def>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrv' on input line 476.
+(hyperref)                removing `\?\cyrv' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 476.
+(hyperref)                removing `\global' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 476.
+(hyperref)                removing `\<let>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrv' on input line 476.
+(hyperref)                removing `\PD1\cyrv' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrv' on input line 476.
+(hyperref)                removing `\?\cyrv' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrv' on input line 476.
+(hyperref)                removing `\PD1\cyrv' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 476.
+(hyperref)                removing `\<def>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyra' on input line 476.
+(hyperref)                removing `\?\cyra' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 476.
+(hyperref)                removing `\global' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 476.
+(hyperref)                removing `\<let>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyra' on input line 476.
+(hyperref)                removing `\PD1\cyra' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyra' on input line 476.
+(hyperref)                removing `\?\cyra' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyra' on input line 476.
+(hyperref)                removing `\PD1\cyra' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 476.
+(hyperref)                removing `\<def>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyryu' on input line 476.
+(hyperref)                removing `\?\cyryu' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 476.
+(hyperref)                removing `\global' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 476.
+(hyperref)                removing `\<let>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyryu' on input line 476.
+(hyperref)                removing `\PD1\cyryu' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyryu' on input line 476.
+(hyperref)                removing `\?\cyryu' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyryu' on input line 476.
+(hyperref)                removing `\PD1\cyryu' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 476.
+(hyperref)                removing `\<def>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrshch' on input line 476.
+(hyperref)                removing `\?\cyrshch' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 476.
+(hyperref)                removing `\global' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 476.
+(hyperref)                removing `\<let>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrshch' on input line 476.
+(hyperref)                removing `\PD1\cyrshch' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrshch' on input line 476.
+(hyperref)                removing `\?\cyrshch' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrshch' on input line 476.
+(hyperref)                removing `\PD1\cyrshch' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 476.
+(hyperref)                removing `\<def>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyri' on input line 476.
+(hyperref)                removing `\?\cyri' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 476.
+(hyperref)                removing `\global' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 476.
+(hyperref)                removing `\<let>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyri' on input line 476.
+(hyperref)                removing `\PD1\cyri' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyri' on input line 476.
+(hyperref)                removing `\?\cyri' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyri' on input line 476.
+(hyperref)                removing `\PD1\cyri' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 476.
+(hyperref)                removing `\<def>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyre' on input line 476.
+(hyperref)                removing `\?\cyre' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 476.
+(hyperref)                removing `\global' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 476.
+(hyperref)                removing `\<let>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyre' on input line 476.
+(hyperref)                removing `\PD1\cyre' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyre' on input line 476.
+(hyperref)                removing `\?\cyre' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyre' on input line 476.
+(hyperref)                removing `\PD1\cyre' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 476.
+(hyperref)                removing `\<def>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrs' on input line 476.
+(hyperref)                removing `\?\cyrs' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 476.
+(hyperref)                removing `\global' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 476.
+(hyperref)                removing `\<let>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrs' on input line 476.
+(hyperref)                removing `\PD1\cyrs' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrs' on input line 476.
+(hyperref)                removing `\?\cyrs' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrs' on input line 476.
+(hyperref)                removing `\PD1\cyrs' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 476.
+(hyperref)                removing `\<def>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrya' on input line 476.
+(hyperref)                removing `\?\cyrya' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 476.
+(hyperref)                removing `\global' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 476.
+(hyperref)                removing `\<let>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrya' on input line 476.
+(hyperref)                removing `\PD1\cyrya' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrya' on input line 476.
+(hyperref)                removing `\?\cyrya' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrya' on input line 476.
+(hyperref)                removing `\PD1\cyrya' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 476.
+(hyperref)                removing `\<def>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrt' on input line 476.
+(hyperref)                removing `\?\cyrt' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 476.
+(hyperref)                removing `\global' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 476.
+(hyperref)                removing `\<let>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrt' on input line 476.
+(hyperref)                removing `\PD1\cyrt' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrt' on input line 476.
+(hyperref)                removing `\?\cyrt' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrt' on input line 476.
+(hyperref)                removing `\PD1\cyrt' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 476.
+(hyperref)                removing `\<def>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyro' on input line 476.
+(hyperref)                removing `\?\cyro' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 476.
+(hyperref)                removing `\global' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 476.
+(hyperref)                removing `\<let>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyro' on input line 476.
+(hyperref)                removing `\PD1\cyro' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyro' on input line 476.
+(hyperref)                removing `\?\cyro' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyro' on input line 476.
+(hyperref)                removing `\PD1\cyro' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 476.
+(hyperref)                removing `\<def>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrch' on input line 476.
+(hyperref)                removing `\?\cyrch' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 476.
+(hyperref)                removing `\global' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 476.
+(hyperref)                removing `\<let>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrch' on input line 476.
+(hyperref)                removing `\PD1\cyrch' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrch' on input line 476.
+(hyperref)                removing `\?\cyrch' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrch' on input line 476.
+(hyperref)                removing `\PD1\cyrch' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 476.
+(hyperref)                removing `\<def>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrk' on input line 476.
+(hyperref)                removing `\?\cyrk' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 476.
+(hyperref)                removing `\global' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 476.
+(hyperref)                removing `\<let>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrk' on input line 476.
+(hyperref)                removing `\PD1\cyrk' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrk' on input line 476.
+(hyperref)                removing `\?\cyrk' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrk' on input line 476.
+(hyperref)                removing `\PD1\cyrk' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 476.
+(hyperref)                removing `\<def>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyri' on input line 476.
+(hyperref)                removing `\?\cyri' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 476.
+(hyperref)                removing `\global' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 476.
+(hyperref)                removing `\<let>-command' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyri' on input line 476.
+(hyperref)                removing `\PD1\cyri' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyri' on input line 476.
+(hyperref)                removing `\?\cyri' on input line 437.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyri' on input line 476.
+(hyperref)                removing `\PD1\cyri' on input line 437.
+
+
+LaTeX Warning: Citation `Fedoryuk' on page 13 undefined on input line 438.
+
+
+LaTeX Warning: Reference `ris:image6' on page 13 undefined on input line 438.
+
+[13]
 
-[14 <./pic6.png (PNG copy)> <./pic7.png (PNG copy)>]
-<pic8.png, id=198, 301.125pt x 301.125pt>
-File: pic8.png Graphic file (type png)
- <use pic8.png>
-Package pdftex.def Info: pic8.png used on input line 480.
-(pdftex.def)             Requested size: 250.24199pt x 250.25072pt.
- [15 <./pic8.png>]
-<pic9.png, id=208, 503.8825pt x 554.07pt>
-File: pic9.png Graphic file (type png)
- <use pic9.png>
-Package pdftex.def Info: pic9.png used on input line 550.
-(pdftex.def)             Requested size: 225.21626pt x 247.64676pt.
+LaTeX Warning: Reference `ris:image6' on page 14 undefined on input line 469.
 
-Underfull \hbox (badness 1424) in paragraph at lines 551--551
-\T2A/cmr/m/n/14.4 ри \T2A/cmr/m/it/14.4 (обыч-ная ли-ния) \T2A/cmr/m/n/14.4 с ф
-унк-ци-ей
- []
 
-<pic10.png, id=209, 503.8825pt x 554.07pt>
-File: pic10.png Graphic file (type png)
- <use pic10.png>
-Package pdftex.def Info: pic10.png used on input line 556.
-(pdftex.def)             Requested size: 225.21626pt x 247.64676pt.
+LaTeX Warning: Reference `ris:image7' on page 14 undefined on input line 500.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `ris:image8' on page 14 undefined on input line 504.
 
-[16pdfTeX warning (ext4): destination with the same identifier (name{equation.3
+[14pdfTeX warning (ext4): destination with the same identifier (name{equation.3
 .16}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.566 
+l.507 
       pdfTeX warning (ext4): destination with the same identifier (name{equatio
 n.3.16}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.566 
+l.507 
       pdfTeX warning (ext4): destination with the same identifier (name{equatio
 n.3.16}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.566 
+l.507 
       pdfTeX warning (ext4): destination with the same identifier (name{equatio
 n.3.16}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.566 
+l.507 
       pdfTeX warning (ext4): destination with the same identifier (name{equatio
 n.3.16}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.566 
-      ] <pic11.png, id=222, 411.5375pt x 355.3275pt>
-File: pic11.png Graphic file (type png)
- <use pic11.png>
-Package pdftex.def Info: pic11.png used on input line 573.
-(pdftex.def)             Requested size: 225.21626pt x 194.45479pt.
+l.507 
+      ]
 
-Underfull \hbox (badness 5832) in paragraph at lines 574--574
-[]\T2A/cmr/m/n/14.4 Рис. 10: []Итоговое при-бли-же-ние
- []
+LaTeX Warning: Reference `ris:image10' on page 15 undefined on input line 508.
 
 
-Underfull \hbox (badness 2050) in paragraph at lines 574--574
-\T2A/cmr/m/n/14.4 се-ля \T2A/cmr/m/it/14.4 (пунк-тир-ная ли-ния)\T2A/cmr/m/n/14
-.4 . $\OML/cmm/m/it/14.4  \OT1/cmr/m/n/14.4 =
- []
+LaTeX Warning: Reference `ris:image12' on page 15 undefined on input line 515.
 
-<pic12.png, id=223, 411.5375pt x 355.3275pt>
-File: pic12.png Graphic file (type png)
- <use pic12.png>
-Package pdftex.def Info: pic12.png used on input line 579.
-(pdftex.def)             Requested size: 225.21626pt x 194.45479pt.
+[15]
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[17 <./pic9.png (PNG copy)> <./pic10.png (PNG copy)>] [18 <./pic11.png (PNG cop
-y)> <./pic12.png (PNG copy)>]
-
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 593.
+(hyperref)                removing `\<def>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\CYRZ' on input line 593.
+(hyperref)                removing `\?\CYRZ' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 593.
+(hyperref)                removing `\global' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 593.
+(hyperref)                removing `\<let>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\CYRZ' on input line 593.
+(hyperref)                removing `\PD1\CYRZ' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\CYRZ' on input line 593.
+(hyperref)                removing `\?\CYRZ' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\CYRZ' on input line 593.
+(hyperref)                removing `\PD1\CYRZ' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 593.
+(hyperref)                removing `\<def>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyra' on input line 593.
+(hyperref)                removing `\?\cyra' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 593.
+(hyperref)                removing `\global' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 593.
+(hyperref)                removing `\<let>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyra' on input line 593.
+(hyperref)                removing `\PD1\cyra' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyra' on input line 593.
+(hyperref)                removing `\?\cyra' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyra' on input line 593.
+(hyperref)                removing `\PD1\cyra' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 593.
+(hyperref)                removing `\<def>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrk' on input line 593.
+(hyperref)                removing `\?\cyrk' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 593.
+(hyperref)                removing `\global' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 593.
+(hyperref)                removing `\<let>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrk' on input line 593.
+(hyperref)                removing `\PD1\cyrk' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrk' on input line 593.
+(hyperref)                removing `\?\cyrk' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrk' on input line 593.
+(hyperref)                removing `\PD1\cyrk' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 593.
+(hyperref)                removing `\<def>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrl' on input line 593.
+(hyperref)                removing `\?\cyrl' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 593.
+(hyperref)                removing `\global' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 593.
+(hyperref)                removing `\<let>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrl' on input line 593.
+(hyperref)                removing `\PD1\cyrl' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrl' on input line 593.
+(hyperref)                removing `\?\cyrl' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrl' on input line 593.
+(hyperref)                removing `\PD1\cyrl' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 593.
+(hyperref)                removing `\<def>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyryu' on input line 593.
+(hyperref)                removing `\?\cyryu' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 593.
+(hyperref)                removing `\global' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 593.
+(hyperref)                removing `\<let>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyryu' on input line 593.
+(hyperref)                removing `\PD1\cyryu' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyryu' on input line 593.
+(hyperref)                removing `\?\cyryu' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyryu' on input line 593.
+(hyperref)                removing `\PD1\cyryu' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 593.
+(hyperref)                removing `\<def>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrch' on input line 593.
+(hyperref)                removing `\?\cyrch' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 593.
+(hyperref)                removing `\global' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 593.
+(hyperref)                removing `\<let>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrch' on input line 593.
+(hyperref)                removing `\PD1\cyrch' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrch' on input line 593.
+(hyperref)                removing `\?\cyrch' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrch' on input line 593.
+(hyperref)                removing `\PD1\cyrch' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 593.
+(hyperref)                removing `\<def>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyre' on input line 593.
+(hyperref)                removing `\?\cyre' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 593.
+(hyperref)                removing `\global' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 593.
+(hyperref)                removing `\<let>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyre' on input line 593.
+(hyperref)                removing `\PD1\cyre' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyre' on input line 593.
+(hyperref)                removing `\?\cyre' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyre' on input line 593.
+(hyperref)                removing `\PD1\cyre' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 593.
+(hyperref)                removing `\<def>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrn' on input line 593.
+(hyperref)                removing `\?\cyrn' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 593.
+(hyperref)                removing `\global' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 593.
+(hyperref)                removing `\<let>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrn' on input line 593.
+(hyperref)                removing `\PD1\cyrn' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyrn' on input line 593.
+(hyperref)                removing `\?\cyrn' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyrn' on input line 593.
+(hyperref)                removing `\PD1\cyrn' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 593.
+(hyperref)                removing `\<def>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyri' on input line 593.
+(hyperref)                removing `\?\cyri' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 593.
+(hyperref)                removing `\global' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 593.
+(hyperref)                removing `\<let>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyri' on input line 593.
+(hyperref)                removing `\PD1\cyri' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyri' on input line 593.
+(hyperref)                removing `\?\cyri' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyri' on input line 593.
+(hyperref)                removing `\PD1\cyri' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 593.
+(hyperref)                removing `\<def>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyre' on input line 593.
+(hyperref)                removing `\?\cyre' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\global' on input line 593.
+(hyperref)                removing `\global' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 593.
+(hyperref)                removing `\<let>-command' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyre' on input line 593.
+(hyperref)                removing `\PD1\cyre' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\?\cyre' on input line 593.
+(hyperref)                removing `\?\cyre' on input line 519.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\PD1\cyre' on input line 593.
-
-[19] (./kurs.bbl
-Underfull \hbox (badness 4940) in paragraph at lines 19--24
-[]\T2A/cmr/m/n/14.4 М.В. Фе-до-рюк. Ме-тод пе-ре-ва-ла.  М.: Глав-ная ре-дак-ци
-я физико-
- []
+(hyperref)                removing `\PD1\cyre' on input line 519.
 
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 608.
- [20]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 608.
+[16]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 534.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 534.
  (./kurs.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 608.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 608.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 534.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 534.
 Package rerunfilecheck Info: File `kurs.out' has not changed.
 (rerunfilecheck)             Checksum: 8609ABAF03881EAE1F16C7C3353E70F2;340.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 608.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 534.
  ) 
 Here is how much of TeX's memory you used:
- 8894 strings out of 494440
- 125056 string characters out of 6173198
- 214619 words of memory out of 5000000
- 11961 multiletter control sequences out of 15000+600000
+ 8809 strings out of 493029
+ 124128 string characters out of 6136234
+ 216103 words of memory out of 5000000
+ 12151 multiletter control sequences out of 15000+600000
  20528 words of font info for 58 fonts, out of 8000000 for 9000
- 430 hyphenation exceptions out of 8191
+ 1141 hyphenation exceptions out of 8191
  29i,11n,32p,2633b,349s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/noir/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk> </home/noir
-/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/lati1440.600pk> </home/noir/.texmf-var/fo
-nts/pk/ljfour/jknappen/ec/tcrm1440.600pk> </home/noir/.texmf-var/fonts/pk/ljfou
-r/lh/lh-t2a/labx1440.600pk> </home/noir/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/la
-bx2074.600pk> </home/noir/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1440.600pk> 
-</home/noir/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk> </home/noir/.t
-exmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1000.600pk> </home/noir/.texmf-var/fonts
-/pk/ljfour/lh/lh-t2a/larm1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on kurs.pdf (20 pages, 418834 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{/usr/share/texmf
+/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1
+728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/
+texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/pu
+blic/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm17
+28.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1440.pfb>
+Output written on kurs.pdf (16 pages, 264684 bytes).
 PDF statistics:
- 623 PDF objects out of 1000 (max. 8388607)
- 271 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
- 120 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 242 PDF objects out of 1000 (max. 8388607)
+ 204 compressed objects within 3 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 65 words of extra memory for PDF output out of 10000 (max. 10000000)
 

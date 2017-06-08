@@ -1,8 +1,58 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: diplom.aux
-I couldn't open style file utf8gost705u.bst
----line 54 of file diplom.aux
- : \bibstyle{utf8gost705u
- :                       }
-I'm skipping whatever remains of this command
-I found no style file---while reading file diplom.aux
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: diplom.aux
+The style file: utf8gost705u.bst
+Database file #1: biblio.bib
+I was expecting a `,' or a `}'---line 98 of file biblio.bib
+ :       
+ :       NOTE = "https://www.gnu.org/software/gsl/"
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty title in 7
+Warning--empty title in 20
+Warning--empty title in 21
+Too many commas in name 1 of "M.V. Frolov, D.V. Knyazeva, N.L. Manankov, Ji-Wei Geng" for entry main
+while executing---line 1510 of file utf8gost705u.bst
+Warning--empty title in main
+You've used 13 entries,
+            2958 wiz_defined-function locations,
+            742 strings with 6617 characters,
+and the built_in function-call counts, 3354 in all, are:
+= -- 473
+> -- 115
+< -- 15
++ -- 39
+- -- 26
+* -- 128
+:= -- 373
+add.period$ -- 46
+call.type$ -- 13
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 17
+duplicate$ -- 153
+empty$ -- 353
+format.name$ -- 26
+if$ -- 917
+int.to.chr$ -- 0
+int.to.str$ -- 13
+missing$ -- 0
+newline$ -- 87
+num.names$ -- 35
+pop$ -- 123
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 66
+stack$ -- 0
+substring$ -- 0
+swap$ -- 82
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 4
+while$ -- 13
+width$ -- 15
+write$ -- 217
 (There were 2 error messages)

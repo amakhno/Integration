@@ -4,7 +4,6 @@ reset
 set encoding koi8r
 set terminal postscript eps size 3.5,2.62 enhanced color font 'Helvetica,15' lw 1
 set output 'terminal_eps.eps'
-set title 'Сравнение корней'
 set xzeroaxis lw 1.5
 # Line styles
 set border linewidth 1.5

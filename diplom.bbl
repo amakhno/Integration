@@ -1,0 +1,95 @@
+\begin{thebibliography}{10}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\language\csname l@#1\endcsname\fi}
+\ifx\undefined\url\def\url#1{{\small #1}}\else\fi
+\ifx\undefined\BibUrl\def\BibUrl#1{\url{#1}}\else\fi
+\ifx\undefined\BibAnnote\long\def\BibAnnote#1{(#1)}\else\fi
+\ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
+
+\bibitem{7}
+\selectlanguageifdefined{russian}
+D.~B.~Milosevic, G.G.~Paulus, D.~Bauer {[и~др.]}~// J, Phys. B.
+\newblock 2006.
+\newblock Т.~39.
+\newblock R203.
+
+\bibitem{20}
+\selectlanguageifdefined{russian}
+Frolov~M.~V., N.L.~Manankov~E.A.~Pronin, Starace~A.F.~// Phys. Rev. Lett.
+\newblock 2003.
+\newblock Т.~91, {№}~052003.
+
+\bibitem{21}
+\selectlanguageifdefined{russian}
+Frolov~M.~V., Starance~A.F.~// Physical Review A.
+\newblock 2003.
+\newblock Т.~78, {№}~063418.
+
+\bibitem{main}
+\selectlanguageifdefined{russian}
+M.V.~Frolov~D.V.~Knyazeva~N.L. Manankov Ji-Wei~Geng~// Physical Review A.
+\newblock 2014.
+\newblock Т.~89.
+\newblock 063419.
+
+\bibitem{Lavrentyev}
+\selectlanguageifdefined{russian}
+М.А~Лаврентьев, Б.В.~Шабат. Методы теории
+  функций комплексного переменного.
+\newblock М.: Главная редакция
+  физико-математической литературы изд-ва
+  «Наука», 1973.
+\newblock 736~{с.}
+
+\bibitem{Urmat}
+\selectlanguageifdefined{russian}
+И.Г.~Араманович, В.И.~Левин. Уравнения
+  математической физики.
+\newblock М.: Наука, 1969.
+\newblock 288~{с.}
+
+\bibitem{Fedoryuk}
+\selectlanguageifdefined{russian}
+М.В.~Федорюк. Метод перевала.
+\newblock М.: Главная редакция
+  физико-математической литературы изд-ва
+  «Наука», 1977.
+\newblock 368~{с.}
+
+\bibitem{Wong}
+\selectlanguageifdefined{english}
+Wong~R. Asymptotic Approximations of Integrals.
+\newblock NY.: SIAM, 2001.
+\newblock 543~p.
+
+\bibitem{spec}
+\selectlanguageifdefined{russian}
+М.~Абрамовиц, И.~Стиган. Справочник по
+  специальным функциям.
+\newblock М.: Наука, 1979.
+\newblock 832~{с.}
+
+\bibitem{tarasevych}
+\selectlanguageifdefined{russian}
+Ю.Ю.~Тарасевич. Численные методы на Mathcad’е.
+\newblock Астрахань: Астраханский гос. пед. ун-т,
+  2000.
+\newblock 70~{с.}
+
+\bibitem{gsl:website}
+\selectlanguageifdefined{russian}
+Galassi~Mark. GSL - GNU Scientific Library.
+
+\bibitem{fftw:website}
+\selectlanguageifdefined{russian}
+Frigo~Matteo, Johnson~Steven~G. FFTW.
+\newblock http://www.fftw.org/index.html.
+
+\bibitem{nrc}
+\selectlanguageifdefined{english}
+Numerical Recipes in C~/ W.~H.~Press, S.~A.~Teukolsky, W.~T.~Vetterling et~al.
+\newblock NY: Press Syndicate of the University of Cambridge, 2002.
+\newblock 949~p.
+
+\end{thebibliography}

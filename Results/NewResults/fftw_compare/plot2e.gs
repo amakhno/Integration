@@ -4,7 +4,6 @@ reset
 set encoding koi8r
 set terminal postscript eps size 3.5,2.62 enhanced color font 'Helvetica,15' lw 1
 set output 'fftw_compare.eps'
-set title 'Численное решение для участка интегрирования'
 # Line styles
 set border linewidth 1.5
 set style line 1 linecolor rgb '#0060ad' linetype 0 linewidth 2   # blue

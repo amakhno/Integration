@@ -1,0 +1,9 @@
+\select@language {russian}
+\contentsline {section}{Введение}{5}{section*.2}
+\contentsline {section}{\numberline {1.\hskip 1em}Постановка задачи}{6}{section.0.1}
+\contentsline {section}{\numberline {2.\hskip 1em}Описание метода перевала}{9}{section.0.2}
+\contentsline {section}{\numberline {3.\hskip 1em}Методы вычисления функции $\mathcal {M}(\epsilon ,t)$}{13}{section.0.3}
+\contentsline {subsection}{\numberline {3.1.\hskip 1em}Аналитическое решение}{13}{subsection.0.3.1}
+\contentsline {subsection}{\numberline {3.2.\hskip 1em}Численное решение}{19}{subsection.0.3.2}
+\contentsline {section}{\numberline {4.\hskip 1em}Анализ результатов}{24}{section.0.4}
+\contentsline {section}{Заключение}{28}{section*.16}

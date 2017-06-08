@@ -1,0 +1,77 @@
+% XeLaTeX can use any Mac OS X font. See the setromanfont command below.
+% Input to XeLaTeX is full Unicode, so Unicode characters can be typed directly into the source.
+
+% The next lines tell TeXShop to typeset with xelatex, and to open and save the source with Unicode encoding.
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[a4paper,14pt]{extarticle}
+\usepackage{geometry}
+\geometry{a4paper}                   % ... or a4paper or a5paper or ...
+%\geometry{landscape}                % Activate for for rotated page geometry
+\setlength{\parindent}{15mm}
+%\renewcommand{\baselinestretch}{1.5}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\newtheorem{proposal}{Предложение}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{theorem_alt}{Теорема (альтернативная формулировка)}
+\newtheorem{consequence}{Следствие}
+\usepackage{fontspec,xltxtra,xunicode}
+\usepackage{csquotes}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+%\defaultfontfeatures{Ligatures=TeX}
+
+\usepackage[titletoc, title]{appendix}
+\renewcommand{\appendixtocname}{Приложения}
+\renewcommand{\appendixname}{Приложение}
+
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Times New Roman}
+\newfontfamily{\cyrillicfonttt}{Times New Roman}\newfontfamily{\cyrillicfonttt}{Courier New}
+%\setmainfont{CMU Serif}
+%\setsansfont{CMU Sans Serif}
+%\setmonofont{CMU Typewriter Text}
+%\usepackage{newtxmath}
+
+\usepackage{polyglossia}
+\setmainlanguage{russian}
+\setotherlanguage{english}
+\setkeys{russian}{babelshorthands=true}
+
+\newcommand{\sectionbreak}{\clearpage}
+\usepackage{titlesec}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{titlesec}
+
+
+\titleformat*{\section}{\Large\bfseries\centering}
+%\titleformat*{\subsection}{\large\bfseries\centering}
+
+\usepackage{listings} 
+\lstset{ 
+	language=[5.2]Mathematica, 
+	morekeywords={Solve, Evaluate}, 
+	breaklines=true, 
+	extendedchars=\true, 
+	inputencoding=utf8, 
+	tabsize=2, 
+	escapeinside={\%}{\%},
+	basicstyle=\small\ttfamily,
+	keywordstyle=\textbf,
+	texcl=true,
+}
+
+\renewcommand{\thepage}{\upshape\arabic{page}}
+\usepackage{csquotes}
+\numberwithin{equation}{section}
+\usepackage{subfiles}
+
+\newcommand{\RN}[1]{%
+	\textup{\uppercase\expandafter{\romannumeral#1}}%
+}
+111111

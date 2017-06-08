@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{}
 \def\selectlanguageifdefined#1{
 \expandafter\ifx\csname date#1\endcsname\relax
 \else\language\csname l@#1\endcsname\fi}
@@ -6,35 +6,5 @@
 \ifx\undefined\BibUrl\def\BibUrl#1{\url{#1}}\else\fi
 \ifx\undefined\BibAnnote\long\def\BibAnnote#1{(#1)}\else\fi
 \ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
-
-\bibitem{Urmat}
-\selectlanguageifdefined{russian}
-Араманович~И.Г.~Левин~В.И. Уравнения
-  математической физики.
-\newblock М.: Наука, 1969.
-\newblock 288~{с.}
-
-\bibitem{Fedoryuk}
-\selectlanguageifdefined{russian}
-М.В.~Федорюк. Метод перевала.
-\newblock М.: Главная редакция
-  физико-математической литературы изд-ва
-  «Наука», 1977.
-\newblock 368~{с.}
-
-\bibitem{Lavrentyev}
-\selectlanguageifdefined{russian}
-Лаврентьев~М.А~Шабат~Б.В. Методы теории
-  функций комплексного переменного.
-\newblock М.: Главная редакция
-  физико-математической литературы изд-ва
-  «Наука», 1973.
-\newblock 736~{с.}
-
-\bibitem{Wong}
-\selectlanguageifdefined{english}
-Wong~R. Asymptotic Approximations of Integrals.
-\newblock NY.: SIAM, 2001.
-\newblock 543~p.
 
 \end{thebibliography}

@@ -1,0 +1,122 @@
+\begin{thebibliography}{10}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\language\csname l@#1\endcsname\fi}
+\ifx\undefined\url\def\url#1{{\small #1}}\else\fi
+\ifx\undefined\BibUrl\def\BibUrl#1{\url{#1}}\else\fi
+\ifx\undefined\BibAnnote\long\def\BibAnnote#1{(#1)}\else\fi
+\ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
+
+\bibitem{7}
+\selectlanguageifdefined{english}
+Ionization by few-cycle pulses: Tracing the electron orbits~/ D.~B.~Milosevic,
+  G.~Paulus, D.~Bauer et~al.~// Phys. Rev. A.
+\newblock 2005.
+\newblock Vol.~71.
+\newblock 061404.
+
+\bibitem{20}
+\selectlanguageifdefined{english}
+Model-Independent Quantum Approach for Intense Laser Detachment of a Weakly
+  Bound Electron~/ M.~V.~Frolov, N.~Manankov, E.~Pronin et~al.~// Phys. Rev.
+  Lett.
+\newblock 2003.
+\newblock Vol.~91.
+\newblock 052003.
+
+\bibitem{21}
+\selectlanguageifdefined{english}
+Frolov~M.~V., Manakov~N., Starace~A. Effective-range theory for an electron in
+  a short-range potential and a laser field~// Phys. Rev. A.
+\newblock 2008.
+\newblock Vol.~78.
+\newblock 063418.
+
+\bibitem{12}
+\selectlanguageifdefined{english}
+Accurate Retrieval of Structural Information from Laser-Induced Photoelectron
+  and High-Order Harmonic Spectra by Few-Cycle Laser Pulses~/ T.~Morishita,
+  A.-T.~Le, Z.~Chen et~al.~// Phys. Rev. Lett.
+\newblock 2008.
+\newblock Vol. 100.
+\newblock 013903.
+
+\bibitem{main}
+\selectlanguageifdefined{english}
+Analytic model for the description of above-threshold ionization by an intense
+  short laser pulse~/ M.~Frolov, D.~Knyazeva, N.~Manankov et~al.~// Phys Rev A.
+\newblock 2014.
+\newblock Vol.~89.
+\newblock 063419.
+
+\bibitem{Lavrentyev}
+\selectlanguageifdefined{russian}
+М.А~Лаврентьев, Б.В.~Шабат. Методы теории
+  функций комплексного переменного.
+\newblock М.: Главная редакция
+  физико-математической литературы изд-ва
+  «Наука», 1973.
+\newblock 736~{с.}
+
+\bibitem{Urmat}
+\selectlanguageifdefined{russian}
+И.Г.~Араманович, В.И.~Левин. Уравнения
+  математической физики.
+\newblock М.: Наука, 1969.
+\newblock 288~{с.}
+
+\bibitem{Fedoryuk}
+\selectlanguageifdefined{russian}
+М.В.~Федорюк. Метод перевала.
+\newblock М.: Главная редакция
+  физико-математической литературы изд-ва
+  «Наука», 1977.
+\newblock 368~{с.}
+
+\bibitem{Wong}
+\selectlanguageifdefined{english}
+Wong~R. Asymptotic Approximations of Integrals.
+\newblock NY.: SIAM, 2001.
+\newblock 543~p.
+
+\bibitem{spec}
+\selectlanguageifdefined{russian}
+М.~Абрамовиц, И.~Стиган. Справочник по
+  специальным функциям.
+\newblock М.: Наука, 1979.
+\newblock 832~{с.}
+
+\bibitem{tarasevych}
+\selectlanguageifdefined{russian}
+Ю.Ю.~Тарасевич. Численные методы на Mathcad’е.
+\newblock Астрахань: Астраханский гос. пед. ун-т,
+  2000.
+\newblock 70~{с.}
+
+\bibitem{gsl:website2}
+\selectlanguageifdefined{russian}
+Galassi~Mark. GNU Reference Manual.
+\newblock 2016.
+\newblock [Сайт] URL: https://www.gnu.org/software/gsl/manual/html\_node/
+  (дата обращения 03.01.17).
+
+\bibitem{gsl:website}
+\selectlanguageifdefined{russian}
+Galassi~Mark. GSL - GNU Scientific Library.
+\newblock 2016.
+\newblock [Сайт] URL: https://www.gnu.org/software/gsl/ (дата
+  обращения 03.01.17).
+
+\bibitem{fftw:website}
+\selectlanguageifdefined{russian}
+Frigo~Matteo, Johnson~Steven. FFTW - Home Page.
+\newblock [Сайт] URL: http://www.fftw.org/index.html (дата
+  обращения 20.12.16).
+
+\bibitem{nrc}
+\selectlanguageifdefined{english}
+Numerical Recipes in C~/ W.~H.~Press, S.~A.~Teukolsky, W.~T.~Vetterling et~al.
+\newblock NY: Press Syndicate of the University of Cambridge, 2002.
+\newblock 949~p.
+
+\end{thebibliography}
