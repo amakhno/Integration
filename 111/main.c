@@ -28,7 +28,7 @@ double S_integrate_new(double tau, double t);
 double S_integrate_func_new(double eps, void * params);
 double Alpha2(double t1, double t);
 double GetEvalSolveWithFFTW(double t);
-double GetEvalSolveS_0(double t);
+double GetEvalSolveM_0(double t);
 double GetEvalSolveWithoutFFTW(double t);
 double GetAnalyticSolve(double t, int countOfRoots, double* roots);
 int FindRoots(double t, double* roots);
@@ -64,7 +64,7 @@ int main()
 		printf("M_numerical(eps, t) = %2.15f\n", m2);
 		printf("M_0(eps, t) = %2.15f\n", m2);
 		fprintf(f, "%2.15f %2.15f\n", t , m1);
-		fprintf(f1, "%2.15f %2.15f\n", t, m2);
+		fprintf(f1, "%2.15f %2.15f\n", t, GetEvalSolveM_0( t ));
 	}
 	
 	fclose(f);
