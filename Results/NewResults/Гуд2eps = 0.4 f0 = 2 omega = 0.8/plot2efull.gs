@@ -13,10 +13,10 @@ set style line 2 linecolor rgb '#dd181f' linetype 1 linewidth 2  # red
 #set key at 6,1.3
 # Axes label 
 set xlabel '{/Helvetica-Oblique ๗าลอั, t}'
-set ylabel '{/Helvetica-Oblique M (eps, t)}'
+set ylabel "|M|^2 (eps, t)"
 # Axis ranges
-set xrange[0:70]
-set yrange[-0.05:1]
+set xrange[0:30]
+set yrange[0:0.6]
 # Axis labels
 #set ytics 1
 set tics scale 0.75

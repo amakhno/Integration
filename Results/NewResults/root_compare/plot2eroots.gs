@@ -14,6 +14,7 @@ set style line 3 lc rgb '#000000' pt 3	 ps 0.5
 set key at 6,1.3
 # Axes label 
 set xlabel '{/Helvetica-Oblique ๗าลอั, t}'
+set ylabel "{/Helvetica-Oblique ๗าลอั, t\'}"
 # Axis ranges
 set xrange[0:20]
 set yrange[-5:5]

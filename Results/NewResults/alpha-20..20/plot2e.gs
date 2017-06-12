@@ -14,7 +14,7 @@ set style line 3 linecolor rgb '#000000' linetype 1 linewidth 2  dt 4 # black
 set key at 19,-0.9
 # Axes label 
 set xlabel "{/Helvetica-Oblique ๗าลอั, t\'}"
-set ylabel '{/Helvetica-Oblique Alpha (t1, t)}'
+set ylabel "{/Helvetica-Oblique Alpha (t\', t)}"
 # Axis ranges
 #set xrange[20:70]
 set yrange[-1.5:1.5]

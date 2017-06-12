@@ -8,21 +8,18 @@
 #include <gsl/gsl_math.h>
 #include <gsl/gsl_roots.h>
 #include <gsl/gsl_errno.h>
-#include "omp.h"
  
 #define TBEGIN (-20.0)
 #define TEND (20.0)
 #define TSTEP (0.1)
-#define EPS 0.5
+#define EPS 0.35
 #define H 1.054572e-27
 #define PIM4 0.7511255444649425 
 #define PI 3.14159265359
-#define _GNU_SOURCE
 #define OMEGA 1
-#define F0 1
+#define F0 1.6
 #define ALPHA 4.472135955
-#define NPOINTS (1024.0)	//
-
+#define NPOINTS (1024.0)	
 
 double f(double x, void * params);
 double A_evaluate(double t, void * params);
@@ -30,11 +27,51 @@ double A_integrate(double t1, double t);
 double S_integrate_new(double tau, double t);
 double S_integrate_func_new(double eps, void * params);
 double Alpha2(double t1, double t);
-double GetEvalSolve(double t);
-double GetEvalSolve2(double t);
-double GetEvalSolve3(double t);
+double GetEvalSolveWithFFTW(double t);
+double GetEvalSolveM_0(double t);
+double GetEvalSolveWithoutFFTW(double t);
+double GetAnalyticSolve(double t, int countOfRoots, double* roots);
+int FindRoots(double t, double* roots);
 
-double countOfRootsPrev = 0;
+int main()
+{
+	FILE *f;
+	f = fopen("analytical.txt", "w");
+	FILE *f1;
+	f1 = fopen("numerical.txt", "w");
+	FILE *f2;
+	f2 = fopen("roots.txt", "w");
+	double tBegin = TBEGIN, tEnd = TEND, tStep = TSTEP;
+	int steps = (int)(tEnd-tBegin)/tStep + 1;
+	double* m1 = (double*) malloc(sizeof(double) * steps);
+	double* m2 = (double*) malloc(sizeof(double) * steps);
+	
+	for(int i = 0; i<steps; i++)
+	{				
+		double t = tBegin + i*tStep;
+		printf("T = %f\n", t);
+		/*double roots[20];
+		int countOfRoots = FindRoots( tBegin + i*tStep , roots );
+		
+		for(int j = 0; j<countOfRoots; j++)
+		{
+			fprintf(f2, "%3.10f %3.10f\n", t, roots[j]);
+		}
+		
+		double m1 = GetAnalyticSolve( t , countOfRoots, roots );		
+		double m2 = GetEvalSolveWithoutFFTW( t );		
+		printf("M_analytic(eps, t) = %2.15f\n", m1);
+		printf("M_numerical(eps, t) = %2.15f\n", m2);
+		fprintf(f, "%2.15f %2.15f\n", t , m1);*/
+		double m2 = Alpha2(t, 0);
+		fprintf(f1, "%2.15f %2.15f\n", t, m2);
+	}
+	
+	fclose(f);
+	fclose(f1);
+	fclose(f2);	
+	return 0;
+}
 
 
 //Структура для численнного решения уравнения
@@ -142,51 +179,6 @@ int FindRoots(double t, double* roots)
 	return countOfRoots;
 }
 
-
-
-int main()
-{
-	FILE *f44;
-	f44 = fopen("f.txt", "w");
-	FILE *f1;
-	f1 = fopen("a.txt", "w");
-	FILE *f2;
-	f2 = fopen("roots.txt", "w");
-	double tBegin = TBEGIN, tEnd = TEND, tStep = TSTEP;
-	int steps = (int)(tEnd-tBegin)/tStep + 1;
-	double* m1 = (double*) malloc(sizeof(double) * steps);
-	double* m2 = (double*) malloc(sizeof(double) * steps);
-	
-	//#pragma omp parallel for shared (m1, m2)
-	for(int i = 0; i<steps; i++)
-	{				
-		//fprintf(f2, "%2.15f %2.15f\n", tBegin + i*tStep, GetEvalSolve2(tBegin + i*tStep)
-		double t = tBegin + i*tStep;
-		fprintf(f44, "%f %2.15f\n" ,t, f(t, 0));
-		fprintf(f1, "%f %2.15f\n", t, A_evaluate(t, 0));
-		/*printf("T = %f\n", t);
-		double roots[20];
-		int countOfRoots = FindRoots( tBegin + i*tStep , roots );
-		
-		for(int j = 0; j<countOfRoots; j++)
-		{
-			fprintf(f2, "%3.10f %3.10f\n", t, roots[j]);
-		}
-		
-		double m1 = GetAnalyticSolve( t , countOfRoots, roots );		
-		double m2 = GetEvalSolve3( t );		
-		printf("M_analytic(eps, t) = %2.15f\n", m1);
-		printf("M_numerical(eps, t) = %2.15f\n", m2);
-		fprintf(f, "%2.15f %2.15f\n", t , m1);
-		fprintf(f1, "%2.15f %2.15f\n", t, m2);*/
-	}
-	
-	fclose(f44);
-	fclose(f1);
-	fclose(f2);	
-	return 0;
-}
-
 double GetAnalyticSolve(double t, int countOfRoots, double* roots)
 {
 	complex sum = 0;
@@ -213,7 +205,7 @@ double f (double x, void * params)
 //A как интеграл от f
 double A_evaluate(double t, void * params)
 {
-	double t1 = -50; 		//Типа -\infty
+	double t1 = -50; 		//-\infty
 	double result;
 	double error;
 	double alpha = 1.0;
@@ -238,10 +230,8 @@ double A_integrate(double t1, double t)
 	gsl_integration_workspace * a = gsl_integration_workspace_alloc (10000);
 	gsl_integration_qags (&F, t1, t, 1e-7, 0, 10000, a, &result, &error); 
 	gsl_integration_workspace_free (a);
-	return result;
-	
+	return result;	
 }
-
 
 //Под интегралом функция S_integrate_func
 double S_integrate_new(double tau, double t)
@@ -272,7 +262,6 @@ double S_integrate_func_new(double eps, void * params)
 	return temp*temp;
 }
 
-
 //Функця по которой решается уравнение
 double Alpha2(double t1, double t)
 {
@@ -285,7 +274,7 @@ double S_integrate_func(double eps, void * params)
 	return temp*temp;
 }
 
-double GetEvalSolve3(double t)
+double GetEvalSolveWithoutFFTW(double t)
 {    
 	double tempEnd = 350;
 	double step = tempEnd / NPOINTS;
@@ -306,7 +295,7 @@ double GetEvalSolve3(double t)
 	return result;
 }
 
-double GetEvalSolve(double t)
+double GetEvalSolveWithFFTW(double t)
 {
 	fftw_complex *in, *out;
     fftw_plan p;
@@ -345,7 +334,7 @@ double GetEvalSolve(double t)
 	return result;
 }
 
-double GetEvalSolveS_0(double t)
+double GetEvalSolveM_0(double t)
 {
 	fftw_complex *in, *out;
     fftw_plan p;
@@ -358,7 +347,6 @@ double GetEvalSolveS_0(double t)
 	double tempPower;	
 		
 	int i = 0;	
-	printf("step = %f\n", step);
 	for(double tempT = 0; tempT < tempEnd; tempT+=step)
 	{
 		if(!tempT)
@@ -368,7 +356,6 @@ double GetEvalSolveS_0(double t)
 			continue;
 		}
 		double S_0=-f(t,0)*f(t,0)/24*tempT*tempT*tempT;
-		printf("double S_0 = %f\n", S_0);
 		in[i] = cexp(I * EPS * tempT) 
 			/ cpow(tempT, 3.0/2.0) 
 			* (cexp(I * S_0) - 1);

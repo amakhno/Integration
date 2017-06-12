@@ -1,0 +1,44 @@
+\documentclass{beamer}
+\usepackage[english,russian]{babel}
+\usepackage[utf8]{inputenc}
+% Стиль презентации
+\usetheme{Warsaw}
+\usecolortheme{dove}
+
+%---------Колонтитулы
+\makeatletter
+\defbeamertemplate*{headline}{my theme}{}
+\defbeamertemplate*{footline}{my theme}{
+	\leavevmode%
+	\hbox{%
+		\begin{beamercolorbox}[wd=.8\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+			\usebeamerfont{title in head/foot}\inserttitle
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+			\usebeamerfont{date in head/foot}\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+	\end{beamercolorbox}}%
+}
+\makeatother
+%--------------------
+
+
+\begin{document}
+\title{Все что вы хотели знать о сферическом коне в вакууме, но боялись спросить}  
+\author{Махно Артем}
+\institute[ВГУ]{Воронежский государственный университет}
+\date{}
+% Создание заглавной страницы
+\frame
+{
+	\titlepage 
+	\small\centering{Руководитель Флегель А В}
+} 
+% Автоматическая генерация содержания
+\frame{\frametitle{Содержание}\tableofcontents} 
+\frame
+{
+	\frametitle{Содержание}
+	\section{Список литературы}
+	Дичка, дичка
+}
+\end{document}

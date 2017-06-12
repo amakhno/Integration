@@ -1,122 +1,139 @@
 \begin{thebibliography}{10}
 \def\selectlanguageifdefined#1{
 \expandafter\ifx\csname date#1\endcsname\relax
-\else\language\csname l@#1\endcsname\fi}
-\ifx\undefined\url\def\url#1{{\small #1}}\else\fi
-\ifx\undefined\BibUrl\def\BibUrl#1{\url{#1}}\else\fi
-\ifx\undefined\BibAnnote\long\def\BibAnnote#1{(#1)}\else\fi
-\ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
+\else\selectlanguage{#1}\fi}
+\providecommand*{\href}[2]{{\small #2}}
+\providecommand*{\url}[1]{{\small #1}}
+\providecommand*{\BibUrl}[1]{\url{#1}}
+\providecommand{\BibAnnote}[1]{}
+\providecommand*{\BibEmph}[1]{#1}
+\ProvideTextCommandDefault{\cyrdash}{\iflanguage{russian}{\hbox
+  to.8em{--\hss--}}{\textemdash}}
+\providecommand*{\BibDash}{\ifdim\lastskip>0pt\unskip\nobreak\hskip.2em plus
+  0.1em\fi
+\cyrdash\hskip.2em plus 0.1em\ignorespaces}
+\renewcommand{\newblock}{\ignorespaces}
 
 \bibitem{7}
 \selectlanguageifdefined{english}
-Ionization by few-cycle pulses: Tracing the electron orbits~/ D.~B.~Milosevic,
-  G.~Paulus, D.~Bauer et~al.~// Phys. Rev. A.
-\newblock 2005.
-\newblock Vol.~71.
+Ionization by few-cycle pulses: Tracing the electron orbits [Text]~/
+  D.~B.~Milosevic, G.G.~Paulus, D.~Bauer, W.~Becker~// \BibEmph{Phys. Rev. A}.
+  \BibDash
+\newblock 2005. \BibDash
+\newblock Vol.~71. \BibDash
 \newblock 061404.
 
 \bibitem{20}
 \selectlanguageifdefined{english}
 Model-Independent Quantum Approach for Intense Laser Detachment of a Weakly
-  Bound Electron~/ M.~V.~Frolov, N.~Manankov, E.~Pronin et~al.~// Phys. Rev.
-  Lett.
-\newblock 2003.
-\newblock Vol.~91.
+  Bound Electron [Text]~/ M.~V.~Frolov, N.L.~Manankov, E.A.~Pronin,
+  A.F.~Starace~// \BibEmph{Phys. Rev. Lett.} \BibDash
+\newblock 2003. \BibDash
+\newblock Vol.~91. \BibDash
 \newblock 052003.
 
 \bibitem{21}
 \selectlanguageifdefined{english}
-Frolov~M.~V., Manakov~N., Starace~A. Effective-range theory for an electron in
-  a short-range potential and a laser field~// Phys. Rev. A.
-\newblock 2008.
-\newblock Vol.~78.
+\BibEmph{Frolov,~M.~V.} Effective-range theory for an electron in a short-range
+  potential and a laser field [Text]~/ M.~V.~Frolov, N.L.~Manakov,
+  A.F.~Starace~// \BibEmph{Phys. Rev. A}. \BibDash
+\newblock 2008. \BibDash
+\newblock Vol.~78. \BibDash
 \newblock 063418.
 
 \bibitem{12}
 \selectlanguageifdefined{english}
 Accurate Retrieval of Structural Information from Laser-Induced Photoelectron
-  and High-Order Harmonic Spectra by Few-Cycle Laser Pulses~/ T.~Morishita,
-  A.-T.~Le, Z.~Chen et~al.~// Phys. Rev. Lett.
-\newblock 2008.
-\newblock Vol. 100.
+  and High-Order Harmonic Spectra by Few-Cycle Laser Pulses [Text]~/
+  T.~Morishita, A.-T.~Le, Z.~Chen, C.~D.~Lin~// \BibEmph{Phys. Rev. Lett.}
+  \BibDash
+\newblock 2008. \BibDash
+\newblock Vol. 100. \BibDash
 \newblock 013903.
 
 \bibitem{main}
 \selectlanguageifdefined{english}
 Analytic model for the description of above-threshold ionization by an intense
-  short laser pulse~/ M.~Frolov, D.~Knyazeva, N.~Manankov et~al.~// Phys Rev A.
-\newblock 2014.
-\newblock Vol.~89.
+  short laser pulse [Text]~/ M.V.~Frolov, D.V.~Knyazeva, N.L.~Manankov,
+  Ji-Wei~Geng~// \BibEmph{Phys Rev A}. \BibDash
+\newblock 2014. \BibDash
+\newblock Vol.~89. \BibDash
 \newblock 063419.
 
 \bibitem{Lavrentyev}
 \selectlanguageifdefined{russian}
-М.А~Лаврентьев, Б.В.~Шабат. Методы теории
-  функций комплексного переменного.
-\newblock М.: Главная редакция
+\BibEmph{М.А,~Лаврентьев}. Методы теории функций
+  комплексного переменного [{Текст}]~/
+  Лаврентьев~М.А, Шабат~Б.В. \BibDash
+\newblock М.~: Главная редакция
   физико-математической литературы изд-ва
-  «Наука», 1973.
-\newblock 736~{с.}
+  «Наука», 1973. \BibDash
+\newblock {С.}~736.
 
 \bibitem{Urmat}
 \selectlanguageifdefined{russian}
-И.Г.~Араманович, В.И.~Левин. Уравнения
-  математической физики.
-\newblock М.: Наука, 1969.
-\newblock 288~{с.}
+\BibEmph{И.Г.,~Араманович}. Уравнения
+  математической физики [{Текст}]~/
+  Араманович~И.Г., Левин~В.И. \BibDash
+\newblock М.~: Наука, 1969. \BibDash
+\newblock {С.}~288.
 
 \bibitem{Fedoryuk}
 \selectlanguageifdefined{russian}
-М.В.~Федорюк. Метод перевала.
-\newblock М.: Главная редакция
+\BibEmph{М.В.,~Федорюк}. Метод перевала [{Текст}]~/
+  Федорюк~М.В. \BibDash
+\newblock М.~: Главная редакция
   физико-математической литературы изд-ва
   «Наука», 1977.
-\newblock 368~{с.}
 
 \bibitem{Wong}
 \selectlanguageifdefined{english}
-Wong~R. Asymptotic Approximations of Integrals.
-\newblock NY.: SIAM, 2001.
-\newblock 543~p.
+\BibEmph{Wong,~R.} Asymptotic Approximations of Integrals [Text]~/ R.~Wong.
+  \BibDash
+\newblock NY.~: SIAM, 2001. \BibDash
+\newblock P.~543.
 
 \bibitem{spec}
 \selectlanguageifdefined{russian}
-М.~Абрамовиц, И.~Стиган. Справочник по
-  специальным функциям.
-\newblock М.: Наука, 1979.
-\newblock 832~{с.}
+\BibEmph{М.,~Абрамовиц}. Справочник по
+  специальным функциям [{Текст}]~/
+  Абрамовиц~М., Стиган~И. \BibDash
+\newblock М.~: Наука, 1979.
 
 \bibitem{tarasevych}
 \selectlanguageifdefined{russian}
-Ю.Ю.~Тарасевич. Численные методы на Mathcad’е.
-\newblock Астрахань: Астраханский гос. пед. ун-т,
-  2000.
-\newblock 70~{с.}
+\BibEmph{Ю.Ю.,~Тарасевич}. Численные методы на
+  Mathcad’е [{Текст}]~/ Тарасевич~Ю.Ю. \BibDash
+\newblock Астрахань~: Астраханский гос. пед.
+  ун-т, 2000. \BibDash
+\newblock {С.}~70.
 
 \bibitem{gsl:website2}
-\selectlanguageifdefined{russian}
-Galassi~Mark. GNU Reference Manual.
-\newblock 2016.
+\selectlanguageifdefined{english}
+\BibEmph{Galassi,~Mark}. GNU Reference Manual [Text]. \BibDash
+\newblock 2016. \BibDash
 \newblock [Сайт] URL: https://www.gnu.org/software/gsl/manual/html\_node/
   (дата обращения 03.01.17).
 
 \bibitem{gsl:website}
-\selectlanguageifdefined{russian}
-Galassi~Mark. GSL - GNU Scientific Library.
-\newblock 2016.
+\selectlanguageifdefined{english}
+\BibEmph{Galassi,~Mark}. GSL - GNU Scientific Library [Text]. \BibDash
+\newblock 2016. \BibDash
 \newblock [Сайт] URL: https://www.gnu.org/software/gsl/ (дата
   обращения 03.01.17).
 
 \bibitem{fftw:website}
-\selectlanguageifdefined{russian}
-Frigo~Matteo, Johnson~Steven. FFTW - Home Page.
+\selectlanguageifdefined{english}
+\BibEmph{Frigo,~Matteo}. FFTW - Home Page [Text]. \BibDash
+\newblock 2017. \BibDash
 \newblock [Сайт] URL: http://www.fftw.org/index.html (дата
   обращения 20.12.16).
 
 \bibitem{nrc}
 \selectlanguageifdefined{english}
-Numerical Recipes in C~/ W.~H.~Press, S.~A.~Teukolsky, W.~T.~Vetterling et~al.
-\newblock NY: Press Syndicate of the University of Cambridge, 2002.
-\newblock 949~p.
+Numerical Recipes in C [Text]~/ William~H.~Press, Saul~A.~Teukolsky,
+  William~T.~Vetterling, Brian~P.~Flannery. \BibDash
+\newblock NY~: Press Syndicate of the University of Cambridge, 2002. \BibDash
+\newblock P.~949.
 
 \end{thebibliography}

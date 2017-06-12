@@ -11,6 +11,7 @@ set border linewidth 1.5
 #set key at 6,1.3
 # Axes label 
 set xlabel '{/Helvetica-Oblique ๗าลอั, t}'
+set ylabel "{/Helvetica-Oblique ๗าลอั, t\'}"
 # Axis ranges
 set xrange[0:30]
 set yrange [-8: 4.2]

@@ -1,0 +1,166 @@
+\begin{thebibliography}{10}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\selectlanguage{#1}\fi}
+\providecommand*{\href}[2]{{\small #2}}
+\providecommand*{\url}[1]{{\small #1}}
+\providecommand*{\BibUrl}[1]{\url{#1}}
+\providecommand{\BibAnnote}[1]{}
+\providecommand*{\BibEmph}[1]{#1}
+\ProvideTextCommandDefault{\cyrdash}{\iflanguage{russian}{\hbox
+  to.8em{--\hss--}}{\textemdash}}
+\providecommand*{\BibDash}{\ifdim\lastskip>0pt\unskip\nobreak\hskip.2em plus
+  0.1em\fi
+\cyrdash\hskip.2em plus 0.1em\ignorespaces}
+\renewcommand{\newblock}{\ignorespaces}
+
+\bibitem{almanah}
+\selectlanguageifdefined{russian}
+\BibEmph{Немухин,~А.~В.} Многоуровневое
+  моделирование сложных химических систем,
+  или за что присуждена Нобелевская премия
+  по химии 2013 года [{Текст}]~/ А.~В.~Немухин,
+  Б.~Л.~Григоренко~// Суперкомпьютерные
+  технологии в науке, образовании и
+  промышленности~/ Под ред.\ В.~А.~Садовничий,
+  Г.~И.~Савин, Вл.~В.~Воеводин. \BibDash
+\newblock М.~: Издательство Московского
+  Государственного Университета, 2013. \BibDash
+\newblock {С.}~5--10.
+
+\bibitem{SalScience01}
+\selectlanguageifdefined{english}
+Feynman's path-integral approach for intense-laser-atom interactions [Text]~/
+  P.~Salieres, B.~Carre, L.~Le~Deroff [et~al.]~// \BibEmph{Science}. \BibDash
+\newblock 2001. \BibDash
+\newblock Vol. 292. \BibDash
+\newblock P.~902--905.
+
+\bibitem{ADVBecker2002}
+\selectlanguageifdefined{english}
+Above threshold ionization: {F}rom classical features to quantum effects
+  [Text]~/ W~Becker, F~Grasbon, R~Kopold [et~al.]~// \BibEmph{Adv. At., Mol.,
+  Opt. Phys.} \BibDash
+\newblock 2002. \BibDash
+\newblock Vol.~48. \BibDash
+\newblock P.~35--98.
+
+\bibitem{MEAdv03}
+\selectlanguageifdefined{english}
+\BibEmph{Milo{\v{s}}evi{\'{c}},~D~B}. Scattering and reaction processes in
+  powerfull laser fields [Text]~/ D~B~Milo{\v{s}}evi{\'{c}}, F~Ehlotzky~//
+  \BibEmph{Adv. At., Mol., Opt. Phys.} \BibDash
+\newblock 2003. \BibDash
+\newblock Vol.~49. \BibDash
+\newblock P.~373--532.
+
+\bibitem{parall}
+\selectlanguageifdefined{english}
+\BibEmph{Birkeland,~T.} Parallel Pseudo-Spectral Methods for the Time-Dependent
+  Schr\"{o}dinger Equation [Text]~/ T.~Birkeland, T.~S{\o}revik~// Parallel
+  Computing. Numerics, Applications, and Trends~/ Ed.\ by\
+  P.~Zinterhof~R.~Trobec, M.~Vajter\v{s}ic. \BibDash
+\newblock Dordrecht, Heidelberg, London, New York~: Springer, 2009. \BibDash
+\newblock P.~261--279.
+
+\bibitem{FFMSZPRA13}
+\selectlanguageifdefined{english}
+Analytic description of elastic electron-atom scattering in an elliptically
+  polarized laser field [Text]~/ A.~V.~Flegel, M.~V.~Frolov, N.~L.~Manakov
+  [et~al.]~// \BibEmph{Phys. Rev. A}. \BibDash
+\newblock 2013. \BibDash
+\newblock Vol.~87. \BibDash
+\newblock P.~013404.
+
+\bibitem{main}
+\selectlanguageifdefined{english}
+Analytic model for the description of above-threshold ionization by an intense
+  short laser pulse [Text]~/ M.~V.~Frolov, D.~V.~Knyazeva, N.~L.~Manakov
+  [et~al.]~// \BibEmph{Phys. Rev. A}. \BibDash
+\newblock 2014. \BibDash
+\newblock Vol.~89. \BibDash
+\newblock P.~063419.
+
+\bibitem{LL}
+\selectlanguageifdefined{russian}
+\BibEmph{Ландау,~Л.~Д.} Квантовая механика
+  [{Текст}]~/ Л.~Д.~Ландау, Е.~М.~Лифшиц. \BibDash
+\newblock М.~: Наука, 1989. \BibDash
+\newblock {С.}~768.
+
+\bibitem{21}
+\selectlanguageifdefined{english}
+\BibEmph{Frolov,~M.~V.} Effective-range theory for an electron in a short-range
+  potential and a laser field [Text]~/ M.~V.~Frolov, N.L.~Manakov,
+  A.F.~Starace~// \BibEmph{Phys. Rev. A}. \BibDash
+\newblock 2008. \BibDash
+\newblock Vol.~78. \BibDash
+\newblock 063418.
+
+\bibitem{Urmat}
+\selectlanguageifdefined{russian}
+\BibEmph{Араманович,~И.~Г.} Уравнения
+  математической физики [{Текст}]~/
+  И.~Г.~Араманович, В.~И.~Левин. \BibDash
+\newblock М.~: Наука, 1969. \BibDash
+\newblock {С.}~288.
+
+\bibitem{Fedoryuk}
+\selectlanguageifdefined{russian}
+\BibEmph{Федорюк,~М.~В.} Метод перевала [{Текст}]~/
+  М.~В.~Федорюк. \BibDash
+\newblock М.~: Главная редакция
+  физико-математической литературы изд-ва
+  «Наука», 1977.
+
+\bibitem{Wong}
+\selectlanguageifdefined{english}
+\BibEmph{Wong,~R.} Asymptotic Approximations of Integrals [Text]~/ R.~Wong.
+  \BibDash
+\newblock NY.~: SIAM, 2001. \BibDash
+\newblock P.~543.
+
+\bibitem{spec}
+\selectlanguageifdefined{russian}
+\BibEmph{Абрамовиц,~М.} Справочник по
+  специальным функциям [{Текст}]~/
+  М.~Абрамовиц, И.~Стиган. \BibDash
+\newblock М.~: Наука, 1979.
+
+\bibitem{tarasevych}
+\selectlanguageifdefined{russian}
+\BibEmph{Тарасевич,~Ю.~Ю.} Численные методы на
+  Mathcad’е [{Текст}]~/ Ю.~Ю.~Тарасевич. \BibDash
+\newblock Астрахань~: Астраханский гос. пед.
+  ун-т, 2000. \BibDash
+\newblock {С.}~70.
+
+\bibitem{gsl:website}
+\selectlanguageifdefined{english}
+\BibEmph{Galassi,~Mark}. GSL - GNU Scientific Library [Text]. \BibDash
+\newblock 2016. \BibDash
+\newblock URL: https://www.gnu.org/software/gsl/ (дата обращения
+  03.01.17).
+
+\bibitem{gsl:website2}
+\selectlanguageifdefined{english}
+\BibEmph{Galassi,~Mark}. GNU Reference Manual [Text]. \BibDash
+\newblock 2016. \BibDash
+\newblock URL: https://www.gnu.org/software/gsl/manual/html\_node/ (дата
+  обращения 03.01.17).
+
+\bibitem{fftw:website}
+\selectlanguageifdefined{english}
+\BibEmph{Frigo,~Matteo}. FFTW - Home Page [Text]. \BibDash
+\newblock 2017. \BibDash
+\newblock URL: http://www.fftw.org/index.html (дата обращения
+  20.12.16).
+
+\bibitem{nrc}
+\selectlanguageifdefined{english}
+Numerical Recipes in C [Text]~/ William~H.~Press, Saul~A.~Teukolsky,
+  William~T.~Vetterling, Brian~P.~Flannery. \BibDash
+\newblock NY~: Press Syndicate of the University of Cambridge, 2002. \BibDash
+\newblock P.~949.
+
+\end{thebibliography}

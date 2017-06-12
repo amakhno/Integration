@@ -15,7 +15,7 @@ set style line 2 linecolor rgb '#dd181f' linetype 1 linewidth 2  # red
 set xlabel '{/Helvetica-Oblique ๗าลอั, t}'
 set ylabel '{/Helvetica-Oblique M (eps, t)}'
 # Axis ranges
-set xrange[20:70]
+set xrange[50:70]
 #set yrange[-1.5:1.5]
 # Axis labels
 #set ytics 1

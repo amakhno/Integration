@@ -3,7 +3,7 @@ reset
 # eps
 set encoding koi8r
 set terminal postscript eps size 3.5,2.62 enhanced color font 'Helvetica,15' lw 1
-set output 'full2.eps'
+set output 'full1.eps'
 set xzeroaxis
 # Line styles
 set border linewidth 1.5
@@ -13,10 +13,10 @@ set style line 2 linecolor rgb '#dd181f' linetype 1 linewidth 2  # red
 #set key at 6,1.3
 # Axes label 
 set xlabel '{/Helvetica-Oblique ๗าลอั, t}'
-set ylabel '{M (eps, t)}'
+set ylabel "|M|^2 (eps, t)"
 # Axis ranges
-set xrange[0:70]
-set yrange[-0.05:1]
+set xrange[0:30]
+set yrange[0:0.6]
 # Axis labels
 #set ytics 1
 set tics scale 0.75

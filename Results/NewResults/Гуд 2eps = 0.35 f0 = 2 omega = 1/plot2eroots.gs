@@ -12,8 +12,8 @@ set style line 1 lc rgb '#0060ad' pt 3
 # Legend
 #set key at 6,1.3
 # Axes label 
-set xlabel '{/Helvetica-Oblique ๗าลอั, t}'
-set ylabel '{M (eps, t)}'
+set xlabel "{/Helvetica-Oblique ๗าลอั, t}"
+set ylabel "{/Helvetica-Oblique ๗าลอั, t\'}"
 # Axis ranges
 set xrange[0:70]
 set yrange[-5:5]
