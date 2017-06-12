@@ -5,6 +5,32 @@
 \usetheme{Warsaw}
 \usecolortheme{dove}
 
+%---------Формулы
+\newcommand{\vF}{\mathbf{F}}
+\newcommand{\ve}{\mathbf{e}}
+\newcommand{\vk}{\mathbf{k}}
+\newcommand{\vq}{\mathbf{q}}
+\newcommand{\vp}{\mathbf{p}}
+\newcommand{\va}{\mathbf{a}}
+\newcommand{\vP}{\mathbf{P}}
+\newcommand{\vK}{\mathbf{K}}
+\newcommand{\vQ}{\mathbf{Q}}
+\newcommand{\vA}{\mathbf{A}}
+\newcommand{\vr}{\mathbf{r}}
+\newcommand{\vR}{\mathbf{R}}
+
+\newcommand{\vRR}{\boldsymbol{\mathcal{R}}}
+\newcommand{\veps}{\boldsymbol{\varepsilon}}
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cD}{\mathcal{D}}
+%----------------
+
 %---------Колонтитулы
 \makeatletter
 \defbeamertemplate*{headline}{my theme}{}
@@ -23,7 +49,7 @@
 
 
 \begin{document}
-\title{Все что вы хотели знать о сферическом коне в вакууме, но боялись спросить}  
+\title{Использование метода перевала в нестационарных задачах квантовой механики}  
 \author{Махно Артем}
 \institute[ВГУ]{Воронежский государственный университет}
 \date{}
@@ -33,12 +59,101 @@
 	\titlepage 
 	\small\centering{Руководитель Флегель А В}
 } 
+
+
 % Автоматическая генерация содержания
 \frame{\frametitle{Содержание}\tableofcontents} 
+
+
 \frame
 {
-	\frametitle{Содержание}
-	\section{Список литературы}
-	Дичка, дичка
+	\frametitle{Постановка задачи}
+	\section{Постановка задачи}
+	В квантовой механике одноэлектронная математическая модель атома, подверженного воздействию лазерного импульса, описывается нестационарным уравнением Шредингера для электронной волновой функции
+	$$
+	\left[i\hbar\frac{\partial}{\partial t} + \frac{\hbar^2}{2 m} \nabla^2 - U(r) - V(\vr, t)\right]\Psi(\vr, t) = 0
+	$$
 }
+
+\frame
+{
+	\frametitle{Постановка задачи}
+	Волновая функция при $r \rightarrow \infty$
+	\begin{equation}\label{A}
+		\Psi(\vr, t) = -\frac{2\pi}{k} \int_{-\infty}^{t} e^{-i\epsilon t'} G(\vr, t;0, t')f(t')dt',
+	\end{equation}
+	где $G(\vr, t;\vr', t')$ - функция Грина, имеющая вид
+	\begin{equation}\nonumber
+	\label{Green}
+	G(\vr,t;\vr',t') = -\theta(t-t')\frac{i}{\hbar}\left[\frac{m}{2\pi i\hbar(t-t')}\right]^{3/2}e^{iS(\vr,t;\vr',t')/\hbar},
+	\end{equation}
+	Граниченое условие при $r \rightarrow 0$
+	\begin{equation}\label{B}
+	\Psi(\vr, t) \sim \left(B(\epsilon) + \frac{1}{r}\right)f(t)e^{-i\epsilon t}
+	\end{equation}
+}
+
+\frame
+{
+	\frametitle{Постановка задачи}
+	Переходя в атомную систему единиц $(|e| = m_e = \hbar = 1)$, и сшивая уравнения (\ref{A}) и (\ref{B}), получаем систему:
+	\begin{eqnarray}\label{system}
+		\sum_{n = -\infty}^{0}[B(\epsilon + n\omega) - i(2(\epsilon + n\omega))^{1/2}]f_ne^{-i n\omega t} = \nonumber\\
+		= \sum_{m = -\infty}^{0} \cM(\epsilon + m\omega,t)f_me^{i m \omega t}, 
+	\end{eqnarray}
+	где для расчета образа фурье функции f $(f_i)$,  
+	потребуется вычислять матричный элемент
+	\begin{equation}\label{input}
+		\cM(\epsilon, t) = \sqrt{\frac{1}{2\pi i}}\int_{0}^{\infty}\frac{e^{i\epsilon\tau}}{\tau^{3/2}}\left[e^{iS(t, t-\tau)} - 1\right].
+	\end{equation}
+}
+
+\frame
+{
+	\frametitle{Метод перевала}
+	\section{Метод перевала}
+	Метод перевала применяется для оценки при больших значениях параметра $\lambda$ интегралов вида
+	\begin{equation}\nonumber
+	I(\lambda) = \int_{a}^{b}\phi(t)e^{\lambda f(t)}dt
+	\end{equation}
+	Преобразуя их к виду
+	\begin{equation}\nonumber
+	I(\lambda) \sim e^{\lambda f (z_0)}\sqrt{\frac{2\pi}{|f^{\prime \prime} (z_0)|}} \phi(z_0) e^{i \theta} \frac{1}{\sqrt{\lambda}},
+	\end{equation}
+	где $z_0$ - корни уравнения $f'(t) = 0$.
+}
+
+\frame
+{
+	\frametitle{Аналитическое ршение}
+	\section{Аналитическое ршение}
+	Итоговая формула, получанная методом перевала
+	\begin{equation}
+	\cM(\epsilon, t) \simeq \sum_{t_0}\frac{e^{i\widetilde{S}(t, t_0)} }{\sqrt{D} (t-t_0)^{3/2}},
+	\end{equation}
+	где $\widetilde{S} = \epsilon (t - t_0) + S(t, t_0)$,
+	$$
+	D = \alpha(t_0, t, t_0)\left[F(t_0) - \frac{1}{(t - t_0)^2} \int_{t_0}^{t}A(\tau)d\tau +  \frac{A(t_0)}{t-t_0} \right]
+	$$
+	и $t_0$ - корни уравнения $\alpha ^2 (t_0, t, t_0) = 2 \epsilon$.
+}
+
+\frame
+{
+	\frametitle{Аналитическое ршение}
+	\section{Аналитическое ршение}
+	Рассмотрим решение уравнения $\alpha ^2 (t_0, t, t_0) = 2 \epsilon.$ для $t = 0$
+	\begin{center}
+		\includegraphics{alpha-200}  
+	\end{center}
+	Аналогично для 
+	
+}
+
+% Создание заглавной страницы
+\frame
+{
+	\titlepage 
+	\small\centering{Руководитель Флегель А В}
+} 
 \end{document}
